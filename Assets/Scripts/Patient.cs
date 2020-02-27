@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,12 +24,23 @@ public class Patient : MonoBehaviour
         
     }
 
-    void GoInline(Door newDoor)
+    public void NewDoor(Door newDoor)
     {
-        if (newDoor.active || newDoor == null)
+        if (!newDoor.active)
         {
-            door = newDoor;
+            return;
         }
+        if (door != null)
+        {
+            door.DeletePatientinQueue(this);
+        }
+        door = newDoor;
+        
+    }
+
+    public Door GetDoor()
+    {
+        return door;
     }
 
     public bool IsInline()

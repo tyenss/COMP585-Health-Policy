@@ -1,21 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using Unity.
 
 public class GlobalVariables : MonoBehaviour
 {
-    public decimal reinmbursment;
-    public decimal bandaidCost;
-    public decimal stitchesCost;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static decimal reinmbursment;
+    public static decimal bandaidCost;
+    public static decimal stitchesCost;
 
-    // Update is called once per frame
-    void Update()
+    public static List<Patient> patientList;
+    public static List<Doctor> doctorList;
+
+    public void Start()
     {
-        
+        patientList = new List<Patient>();
+        doctorList = new List<Doctor>();
     }
 }
