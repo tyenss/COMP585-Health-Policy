@@ -17,6 +17,32 @@ public class Door : MonoBehaviour
            playerQueue = new Queue<Patient>();
     }
 
+    /// database access for queue
+    public void queueDB()
+    {
+        StartCoroutine(addPatient());
+    }
+ 
+    IEnumerator addPatient()
+    {
+        WWWForm form = new WWWForm();
+        ///form.AddField("name", player.name);
+        WWW www = new WWW("http://localhost/sqlconnect/connection.php");
+        yield return www;
+        if (www.text == "0")
+        {
+            Debug.Log("Patient added successfully");
+        }
+        else 
+        {
+            Debug.Log("error");
+        }
+    }
+
+
+
+
+
     /// <summary>
     /// Make compatible for tablet
     /// </summary>
