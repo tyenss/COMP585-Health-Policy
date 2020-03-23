@@ -17,6 +17,54 @@ public class Door : MonoBehaviour
            playerQueue = new Queue<Patient>();
     }
 
+    /// database access for queue
+    public void queueDB()
+    {
+        StartCoroutine(addPatient());
+    }
+
+    IEnumerator addPatient()
+    {
+        WWWForm form = new WWWForm();
+        ///form.AddField("name", player.name);
+        WWW www = new WWW("http://localhost/sqlconnect/addPatient.php");
+        yield return www;
+        if (www.text == "0")
+        {
+            Debug.Log("Patient added successfully");
+        }
+        else
+        {
+            Debug.Log("error" + www.text);
+        }
+    }
+
+    
+    
+    /// removes data from the database
+    public void deQueueDB()  
+    {
+        StartCoroutine(removePatient());
+    }
+
+    IEnumerator removePatient()
+    {
+        WWWForm form = new WWWForm();
+        ///form.AddField("name", player.name);
+        WWW www = new WWW("http://localhost/sqlconnect/removePatient.php");
+        yield return www;
+        if (www.text == "0")
+        {
+            Debug.Log("Patient removed successfully");
+        }
+        else
+        {
+            Debug.Log("error" + www.text);
+        }
+    }
+
+
+
     /// <summary>
     /// Make compatible for tablet
     /// </summary>
@@ -26,6 +74,8 @@ public class Door : MonoBehaviour
         if (!playerQueue.Contains(player))
         {
             AddToQueue(player);
+            
+
         }
     }
 
@@ -45,6 +95,7 @@ public class Door : MonoBehaviour
             coordsToPlace.y - (float)(playerQueue.Count() * 100),
             patient.transform.position.z);
         playerQueue.Enqueue(patient);
+        queueDB();
     }
 
     /// <summary>
@@ -65,6 +116,7 @@ public class Door : MonoBehaviour
                 patient.transform.position.z);
         }
         popped.NewDoor(null);
+        deQueueDB();
         return popped;
     }
 
@@ -76,6 +128,8 @@ public class Door : MonoBehaviour
         if (playerQueue.Contains(patient))
         {
             playerQueue = new Queue<Patient>(playerQueue.Where(s => s != patient));
+            deQueueDB();
+            
         }
     }
 }
