@@ -2,9 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
+using Mirror;
 
-public class Patient : MonoBehaviour
+public class Patient : NetworkBehaviour
 {
+    public GameObject PlayerCamera;
     public bool boughtCure;
     public decimal money;
     public int patientID;
@@ -14,6 +17,14 @@ public class Patient : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (isLocalPlayer)
+        {
+            PlayerCamera.SetActive(true);
+        }
+        else
+        {
+            PlayerCamera.SetActive(false);
+        }
         door = null;
         boughtCure = false;
     }
@@ -21,7 +32,10 @@ public class Patient : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!isLocalPlayer)
+        {
+            return;
+        }  
     }
 
     public void NewDoor(Door newDoor)
