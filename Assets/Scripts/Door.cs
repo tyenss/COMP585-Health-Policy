@@ -18,15 +18,20 @@ public class Door : MonoBehaviour
     }
 
     /// database access for queue
-    public void queueDB()
+    
+    /// Make compatible for tablet
+    
+    public void queueDB(Patient patient)
     {
-        StartCoroutine(addPatient());
+        StartCoroutine(addPatient(patient));
     }
 
-    IEnumerator addPatient()
+    IEnumerator addPatient(Patient patient)
     {
         WWWForm form = new WWWForm();
-        ///form.AddField("name", player.name);
+        form.AddField("doctor_id", 1);
+        form.AddField("patient_id", patient.patientID);
+        
         WWW www = new WWW("http://localhost/sqlconnect/addPatient.php");
         yield return www;
         if (www.text == "0")
@@ -35,22 +40,22 @@ public class Door : MonoBehaviour
         }
         else
         {
-            Debug.Log("error" + www.text);
+            Debug.Log("error:" + www.text);
         }
     }
 
     
     
     /// removes data from the database
-    public void deQueueDB()  
+    public void deQueueDB(Patient patient)  
     {
-        StartCoroutine(removePatient());
+        StartCoroutine(removePatient(patient));
     }
 
-    IEnumerator removePatient()
+    IEnumerator removePatient(Patient patient)
     {
         WWWForm form = new WWWForm();
-        ///form.AddField("name", player.name);
+        form.AddField("patient_id", patient.patientID);
         WWW www = new WWW("http://localhost/sqlconnect/removePatient.php");
         yield return www;
         if (www.text == "0")
@@ -62,7 +67,7 @@ public class Door : MonoBehaviour
             Debug.Log("error" + www.text);
         }
     }
-
+    
 
 
     /// <summary>
@@ -95,7 +100,8 @@ public class Door : MonoBehaviour
             coordsToPlace.y - (float)(playerQueue.Count() * 100),
             patient.transform.position.z);
         playerQueue.Enqueue(patient);
-        queueDB();
+        queueDB(patient);
+        
     }
 
     /// <summary>
@@ -116,7 +122,7 @@ public class Door : MonoBehaviour
                 patient.transform.position.z);
         }
         popped.NewDoor(null);
-        deQueueDB();
+        
         return popped;
     }
 
@@ -128,7 +134,7 @@ public class Door : MonoBehaviour
         if (playerQueue.Contains(patient))
         {
             playerQueue = new Queue<Patient>(playerQueue.Where(s => s != patient));
-            deQueueDB();
+            deQueueDB(patient);
             
         }
     }
