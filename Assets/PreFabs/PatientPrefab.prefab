@@ -98,7 +98,9 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   PlayerCamera: {fileID: 1763397212}
-  boughtCure: 0
+  roomID: 0
+  cure: 0
+  money: 1000
   patientID: 0
   patientName: 
 --- !u!114 &1638280690553061228

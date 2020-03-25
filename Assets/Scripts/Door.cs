@@ -48,7 +48,8 @@ public class Door : MonoBehaviour
     /// </summary>
     void OnMouseDown()
     {
-        Patient player = FindObjectOfType(typeof(Patient)) as Patient;
+        //Patient player = FindObjectOfType(typeof(Patient)) as Patient;
+        Patient player = GameObject.Find("Local").GetComponent<Patient>();
         if (!playerQueue.Contains(player))
         {
             AddToQueue(player);
@@ -56,14 +57,18 @@ public class Door : MonoBehaviour
     }
 
     /// <summary>
-    /// If patient is null, nothing happens
+    /// If patient is null or is cured, nothing happens
     /// </summary>
     /// <param name="patient"></param>
     public void AddToQueue(Patient patient)
     {
-        if (patient == null)
+        if (patient == null || patient.cure != Patient.Cure.None)
         {
             return;
+        }
+        if (patient.GetDoor() != null)
+        {
+            patient.GetDoor().RemovePatientinQueue(patient);
         }
         patient.NewDoor(this);
         patient.transform.position = new Vector3(
@@ -91,13 +96,14 @@ public class Door : MonoBehaviour
                 patient.transform.position.z);
         }
         popped.NewDoor(null);
+        popped.roomID = doorID;
         return popped;
     }
 
     /// <summary>
     /// Gets rid of a patient in the queue, no matter where they are at
     /// </summary>
-    public void DeletePatientinQueue(Patient patient)
+    public void RemovePatientinQueue(Patient patient)
     {
         if (playerQueue.Contains(patient))
         {

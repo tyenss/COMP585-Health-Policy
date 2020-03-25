@@ -12,7 +12,7 @@ public class GlobalVariables : MonoBehaviour
     public static List<Patient> patientList;
     public static List<Doctor> doctorList;
 
-    public void Start()
+    public void Awake()
     {
         patientList = new List<Patient>();
         doctorList = new List<Doctor>();
