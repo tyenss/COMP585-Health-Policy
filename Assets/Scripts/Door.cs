@@ -14,30 +14,30 @@ public class Door : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-           playerQueue = new Queue<Patient>();
+        playerQueue = new Queue<Patient>();
     }
 
     /// database access for queue
-    public void queueDB()
-    {
-        StartCoroutine(addPatient());
-    }
+    //public void queueDB()
+    //{
+    //    StartCoroutine(addPatient());
+    //}
  
-    IEnumerator addPatient()
-    {
-        WWWForm form = new WWWForm();
-        ///form.AddField("name", player.name);
-        WWW www = new WWW("http://localhost/sqlconnect/connection.php");
-        yield return www;
-        if (www.text == "0")
-        {
-            Debug.Log("Patient added successfully");
-        }
-        else 
-        {
-            Debug.Log("error");
-        }
-    }
+    //IEnumerator addPatient()
+    //{
+    //    WWWForm form = new WWWForm();
+    //    ///form.AddField("name", player.name);
+    //    WWW www = new WWW("http://localhost/sqlconnect/connection.php");
+    //    yield return www;
+    //    if (www.text == "0")
+    //    {
+    //        Debug.Log("Patient added successfully");
+    //    }
+    //    else 
+    //    {
+    //        Debug.Log("error");
+    //    }
+    //}
 
 
 

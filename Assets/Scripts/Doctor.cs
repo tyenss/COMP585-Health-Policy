@@ -9,6 +9,7 @@ public class Doctor : MonoBehaviour
     public int bandaidPrice;
     public int stitchesPrice;
     public bool inOffice; //if 0, in lobby; else, in office
+	//public bool hasClient;
 
     protected decimal moneyMade;
     public int doctorID;
@@ -81,4 +82,21 @@ public class Doctor : MonoBehaviour
         stitchesPrice = price;
         return true;
     }
+
+    /// <summary>
+	/// Switch rooms between lobby and office
+	/// </summary>
+	public void SwitchRooms()
+	{
+		if (inOffice)
+		{
+            
+		}
+		else if (!inOffice)
+		{
+
+		}
+
+		inOffice = !inOffice;
+	}
 }

@@ -12,6 +12,9 @@ public class GlobalVariables : MonoBehaviour
     public static List<Patient> patientList;
     public static List<Doctor> doctorList;
 
+    /// <summary>
+	/// Awake is used to instantiate variables before prefabs are instantiated
+	/// </summary>
     public void Awake()
     {
         patientList = new List<Patient>();
