@@ -89,19 +89,24 @@ public class Door : MonoBehaviour
             return null;
         }
         Patient popped = playerQueue.Dequeue();
-        foreach (Patient patient in playerQueue)
+        if (playerQueue.Any())
         {
-            patient.transform.position = new Vector3(coordsToPlace.x,
-                coordsToPlace.y + 100,
-                patient.transform.position.z);
+            foreach (Patient patient in playerQueue)
+            {
+                patient.transform.position = new Vector3(coordsToPlace.x,
+                    coordsToPlace.y + 100,
+                    patient.transform.position.z);
+            }
         }
         popped.NewDoor(null);
         popped.roomID = doorID;
+        popped.transform.position = this.officeCoords;
+        ButtonHandler.EnableDisableButtons(true);
         return popped;
     }
 
     /// <summary>
-    /// Gets rid of a patient in the queue, no matter where they are at
+    /// Removes patient in the queue, irregardless of position
     /// </summary>
     public void RemovePatientinQueue(Patient patient)
     {

@@ -20,6 +20,7 @@ public class Patient : NetworkBehaviour
 
     public Text health;
     public Text cured;
+    public Text moneyText;
 
     //public localPlayer;
 
@@ -38,7 +39,8 @@ public class Patient : NetworkBehaviour
         cure = Cure.None;
         GlobalVariables.patientList.Add(this);
         patientID = GlobalVariables.patientList.Count;
-        health.text = GetRandomHealth().ToString();
+        health.text = String.Concat("Health: :",GetRandomHealth().ToString());
+        ButtonHandler.EnableDisableButtons(false);
     }
 
     void Update()
@@ -47,24 +49,8 @@ public class Patient : NetworkBehaviour
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
-            if (this.GetDoor() != null)
-            {
-                this.roomID = GetDoor().doorID;
-                this.GetDoor().RemovePatientinQueue(this);
-                this.transform.position = this.GetDoor().officeCoords;
-                this.door = null;
-            }
-        }
 
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            this.roomID = 0;
-            this.transform.position = new Vector3(0f, 0f, 0f);
-        }
-
-        BuyMedicine();
+        moneyText.text = String.Concat("Money :", money.ToString());
     }
 
     public override void OnStartLocalPlayer()
@@ -75,6 +61,11 @@ public class Patient : NetworkBehaviour
 
     public void NewDoor(Door newDoor)
     {
+        if (newDoor == null)
+        {
+            door = newDoor;
+            return;
+        }
         if (!newDoor.active)
         {
             return;
@@ -95,37 +86,6 @@ public class Patient : NetworkBehaviour
     public bool IsInline()
     {
         return door != null;
-    }
-
-    public void BuyMedicine()
-    {
-        if (roomID > 0)
-        {
-            Doctor doctor = GlobalVariables.doctorList.Find(x => x.doctorID == roomID);
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                if (money >= doctor.stitchesPrice && cure == Cure.None)
-                {
-                    doctor.StitchesSold();
-                    cure = Cure.Stitches;
-                    money -= doctor.stitchesPrice;
-					roomID = 0;
-					this.transform.position = new Vector3(0f, 0f, 0f);
-				}
-            }
-            else if (Input.GetKeyDown(KeyCode.B))
-            {
-                if (money >= doctor.bandaidPrice && cure == Cure.None)
-                {
-                    doctor.BandaidSold();
-                    cure = Cure.Bandaid;
-                    money -= doctor.bandaidPrice;
-					roomID = 0;
-					this.transform.position = new Vector3(0f, 0f, 0f);
-				}
-            }
-            cured.text = cure.ToString();
-        }
     }
 
     private int GetRandomHealth()
