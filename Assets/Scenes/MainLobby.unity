@@ -277,6 +277,11 @@ PrefabInstance:
       propertyPath: doctorID
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5041460139289638495, guid: e76e4d134a4b843eca33efd133dcefec,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1763556177}
     - target: {fileID: 8700870579101232620, guid: e76e4d134a4b843eca33efd133dcefec,
         type: 3}
       propertyPath: m_Name
@@ -1805,6 +1810,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1725799030}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &1763556177 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4005360279710065541, guid: e76e4d134a4b843eca33efd133dcefec,
+    type: 3}
+  m_PrefabInstance: {fileID: 285406712}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1819846226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2006,7 +2017,7 @@ MonoBehaviour:
   onlineScene: 
   transport: {fileID: 1893633061}
   networkAddress: localhost
-  maxConnections: 4
+  maxConnections: 30
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 6901597289592199066, guid: 615c6013f5efc43a6a1d581623cb2447,
     type: 3}
