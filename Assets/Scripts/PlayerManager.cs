@@ -10,15 +10,29 @@ public class PlayerManager : NetworkBehaviour
     public GameObject patient;
     public GameObject doctor;
 
-    public GameObject player;
+    //public GameObject player;
 
-    public GameObject PatientCamera;
-    public GameObject DoctorCamera;
+    //public GameObject PatientCamera;
+    //public GameObject DoctorCamera;
+
+    private GameObject patient1;
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.Instantiate(doctor);
-        GameObject.Instantiate(patient);
+        System.Random random = new System.Random();
+        
+        if (random.Next(2) == 1)
+        {
+            patient1 = Instantiate(patient);
+        } else
+        {
+            GameObject doctor1 = Instantiate(doctor);
+            doctor1.GetComponent<Camera>().tag = "MainCamera";
+        }
+        //GameObject.Instantiate(doctor);
+        //patient1 = Instantiate(patient);
+        //patient1.GetComponent<Camera>().tag = "MainCamera";
+        //patient1.GetComponent<Camera>().enabled = true;
     }
     /*
     public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
@@ -32,23 +46,24 @@ public class PlayerManager : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (patient.active)
-        {
-            PatientCamera.SetActive(true);
-            player = patient;
-        }
-        else
-        {
-            PatientCamera.SetActive(false);
-        }
-        if (doctor.active)
-        {
-            DoctorCamera.SetActive(true);
-            player = doctor;
-        }
-        else
-        {
-            DoctorCamera.SetActive(false);
-        }
+        //if (patient1.active)
+        //if (patient.active)
+        //{
+        //    PatientCamera.SetActive(true);
+        //    player = patient;
+        //}
+        //else
+        //{
+        //    PatientCamera.SetActive(false);
+        //}
+        //if (doctor.active)
+        //{
+        //    DoctorCamera.SetActive(true);
+        //    player = doctor;
+        //}
+        //else
+        //{
+        //    DoctorCamera.SetActive(false);
+        //}
     }
 }

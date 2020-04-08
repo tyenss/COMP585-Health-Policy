@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3348469484335972090}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,7 +250,7 @@ PrefabInstance:
     - target: {fileID: 3300799546944532708, guid: b5a85490c717c88408f046479f4e1b8a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5107485099718359295, guid: b5a85490c717c88408f046479f4e1b8a,
         type: 3}

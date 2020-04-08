@@ -12,7 +12,7 @@ public class ChooseCharacter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.Instantiate(doctor);
+        //Instantiate(doctor);
         
         
     }
@@ -29,8 +29,8 @@ public class ChooseCharacter : MonoBehaviour
                 break;
 
             case 2:
-                GameObject patient1= GameObject.Instantiate(patient);
-                patient1.GetComponent<Camera>().enable = true;
+                //GameObject patient1= GameObject.Instantiate(patient);
+                //patient1.GetComponent<Camera>().enable = true;
                 currentCharacter = 1;
                 patient.gameObject.SetActive(true);
                 doctor.gameObject.SetActive(false);

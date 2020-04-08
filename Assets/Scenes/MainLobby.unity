@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &138478500 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4005360279710065541, guid: e76e4d134a4b843eca33efd133dcefec,
+    type: 3}
+  m_PrefabInstance: {fileID: 285406712}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &152069644 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4005515748758727675, guid: 28b8bcd983f9e48009fd368615abdd1e,
@@ -282,6 +288,11 @@ PrefabInstance:
       propertyPath: doctorID
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5041460139289638495, guid: e76e4d134a4b843eca33efd133dcefec,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 138478500}
     - target: {fileID: 8700870579101232620, guid: e76e4d134a4b843eca33efd133dcefec,
         type: 3}
       propertyPath: m_Name
@@ -2560,7 +2571,8 @@ MonoBehaviour:
   networkAddress: localhost
   maxConnections: 4
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 0}
+  playerPrefab: {fileID: 1597355351601913610, guid: 4e3f369cdd13f4aa0904e640fbd7ce2f,
+    type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs:
