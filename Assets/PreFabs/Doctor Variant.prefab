@@ -83,6 +83,21 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2265081131368877128}
   m_Enabled: 1
+--- !u!114 &-7064173442429329008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8700870579101232620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
 --- !u!114 &4123592356929240661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +114,7 @@ MonoBehaviour:
   bandaidPrice: 0
   stitchesPrice: 0
   inOffice: 0
+  money: 0
   doctorID: 0
 --- !u!1001 &1677978141446111269
 PrefabInstance:
@@ -230,6 +246,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Doctor Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3300799546944532708, guid: b5a85490c717c88408f046479f4e1b8a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5107485099718359295, guid: b5a85490c717c88408f046479f4e1b8a,
         type: 3}

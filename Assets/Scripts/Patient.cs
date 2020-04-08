@@ -27,6 +27,7 @@ public class Patient : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.name = "Local";
         if (isLocalPlayer)
         {
             PlayerCamera.SetActive(true);
@@ -56,8 +57,10 @@ public class Patient : NetworkBehaviour
     public override void OnStartLocalPlayer()
     {
         base.OnStartLocalPlayer();
-        gameObject.name = "Local";
+       // gameObject.name = "Local";
+        
     }
+    
 
     public void NewDoor(Door newDoor)
     {
