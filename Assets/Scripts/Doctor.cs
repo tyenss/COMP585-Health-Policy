@@ -11,7 +11,7 @@ public class Doctor : MonoBehaviour
     public bool inOffice; //if 0, in lobby; else, in office
 	//public bool hasClient;
 
-    protected decimal moneyMade;
+    public int money;
     public int doctorID;
     private int bandaidsSold;
     private int stitchesSold;
@@ -27,7 +27,7 @@ public class Doctor : MonoBehaviour
         //{
         //    PlayerCamera.SetActive(false);
         //}
-        moneyMade = 0;
+        money = 0;
         bandaidsSold = 0;
         stitchesSold = 0;
         inOffice = true;
@@ -44,10 +44,10 @@ public class Doctor : MonoBehaviour
     public void BandaidSold()
     {
         bandaidsSold++;
-        moneyMade += bandaidPrice + GlobalVariables.reinmbursment - GlobalVariables.bandaidCost;
+        money += bandaidPrice + GlobalVariables.reinmbursment - GlobalVariables.bandaidCost;
     }
 
-    public int getBandaidsSold()
+    public int GetBandaidsSold()
     {
         return bandaidsSold;
     }
@@ -55,7 +55,7 @@ public class Doctor : MonoBehaviour
     public void StitchesSold()
     {
         stitchesSold++;
-        moneyMade += stitchesPrice + GlobalVariables.reinmbursment - GlobalVariables.stitchesCost;
+        money += stitchesPrice + GlobalVariables.reinmbursment - GlobalVariables.stitchesCost;
     }
 
     public int GetStitchesSold()

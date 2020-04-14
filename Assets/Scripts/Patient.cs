@@ -6,6 +6,7 @@ using UnityEngine.Networking;
 using Mirror;
 using UnityEngine.UI;
 
+[Serializable]
 public class Patient : NetworkBehaviour
 {
     public GameObject PlayerCamera;
@@ -16,16 +17,19 @@ public class Patient : NetworkBehaviour
     public int money;
     public int patientID;
     public string patientName;
+
     private Door door; //door that the player is in queue, null if not
 
     public Text health;
     public Text cured;
+    public Text moneyText;
 
     //public localPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.name = "Local";
         if (isLocalPlayer)
         {
             PlayerCamera.SetActive(true);
@@ -38,7 +42,9 @@ public class Patient : NetworkBehaviour
         cure = Cure.None;
         GlobalVariables.patientList.Add(this);
         patientID = GlobalVariables.patientList.Count;
-        health.text = GetRandomHealth().ToString();
+        health.text = String.Concat("Health: :",GetRandomHealth().ToString());
+        ButtonHandler.EnableDisableButtons(false);
+        //this.gameObject.GetComponent<Camera>().
     }
 
     void Update()
@@ -47,34 +53,24 @@ public class Patient : NetworkBehaviour
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
-            if (this.GetDoor() != null)
-            {
-                this.roomID = GetDoor().doorID;
-                this.GetDoor().RemovePatientinQueue(this);
-                this.transform.position = this.GetDoor().officeCoords;
-                this.door = null;
-            }
-        }
 
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            this.roomID = 0;
-            this.transform.position = new Vector3(0f, 0f, 0f);
-        }
-
-        BuyMedicine();
+        moneyText.text = String.Concat("Money :", money.ToString());
     }
 
     public override void OnStartLocalPlayer()
     {
         base.OnStartLocalPlayer();
-        gameObject.name = "Local";
+        //gameObject.name = "Local";
     }
 
     public void NewDoor(Door newDoor)
     {
+        //GameObject.Instantiate(
+        if (newDoor == null)
+        {
+            door = newDoor;
+            return;
+        }
         if (!newDoor.active)
         {
             return;
@@ -97,44 +93,14 @@ public class Patient : NetworkBehaviour
         return door != null;
     }
 
-    public void BuyMedicine()
-    {
-        if (roomID > 0)
-        {
-            Doctor doctor = GlobalVariables.doctorList.Find(x => x.doctorID == roomID);
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                if (money >= doctor.stitchesPrice && cure == Cure.None)
-                {
-                    doctor.StitchesSold();
-                    cure = Cure.Stitches;
-                    money -= doctor.stitchesPrice;
-					roomID = 0;
-					this.transform.position = new Vector3(0f, 0f, 0f);
-				}
-            }
-            else if (Input.GetKeyDown(KeyCode.B))
-            {
-                if (money >= doctor.bandaidPrice && cure == Cure.None)
-                {
-                    doctor.BandaidSold();
-                    cure = Cure.Bandaid;
-                    money -= doctor.bandaidPrice;
-					roomID = 0;
-					this.transform.position = new Vector3(0f, 0f, 0f);
-				}
-            }
-            cured.text = cure.ToString();
-        }
-    }
-
     private int GetRandomHealth()
     {
         System.Random random = new System.Random();
-        int num = random.Next(0, 2);
+        int num = random.Next(0, 10);
         for (int i = 1; i < 10; i++)
         {
-            num = (int)(random.Next(0,2) * Math.Pow(10, i)) + num;
+            int nextNumber = (int)random.Next(0, 10);
+            num = nextNumber > GlobalVariables.chanceOfOne ? (int)(1 * Math.Pow(10, i)) + num : (int)(0 * Math.Pow(10, i) + num);
         }
         return num;
     }

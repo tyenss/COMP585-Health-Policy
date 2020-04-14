@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class GlobalVariables : MonoBehaviour
 {
-    public static decimal reinmbursment;
-    public static decimal bandaidCost;
-    public static decimal stitchesCost;
+    public static int reinmbursment;
+    public static int bandaidCost;
+    public static int stitchesCost;
+    public static int chanceOfOne;
 
     public static List<Patient> patientList;
     public static List<Doctor> doctorList;
+    public static List<GameObject> buttons;
 
     /// <summary>
 	/// Awake is used to instantiate variables before prefabs are instantiated
@@ -19,5 +21,6 @@ public class GlobalVariables : MonoBehaviour
     {
         patientList = new List<Patient>();
         doctorList = new List<Doctor>();
+        buttons = new List<GameObject>();
     }
 }
