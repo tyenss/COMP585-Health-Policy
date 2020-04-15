@@ -60,8 +60,9 @@ public class Patient : NetworkBehaviour
     public override void OnStartLocalPlayer()
     {
         base.OnStartLocalPlayer();
-        //gameObject.name = "Local";
+
     }
+    
 
     public void NewDoor(Door newDoor)
     {
