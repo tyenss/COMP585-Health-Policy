@@ -11,14 +11,16 @@ public class PlayerManager : NetworkBehaviour
     public GameObject doctor;
 
     //public GameObject player;
-
+    public GameObject playerCamera;
     //public GameObject PatientCamera;
     //public GameObject DoctorCamera;
 
     private GameObject patient1;
+    private GameObject doctor1;
     // Start is called before the first frame update
     void Start()
     {
+        /*
         System.Random random = new System.Random();
         
         if (random.Next(2) == 1)
@@ -26,9 +28,15 @@ public class PlayerManager : NetworkBehaviour
             patient1 = Instantiate(patient);
         } else
         {
-            GameObject doctor1 = Instantiate(doctor);
+            doctor1 = Instantiate(doctor);
             doctor1.GetComponent<Camera>().tag = "MainCamera";
         }
+        */
+       // patient1 = Instantiate(patient);
+        doctor1 = Instantiate(doctor);
+        playerCamera = GameObject.FindWithTag("MainCamera");
+        playerCamera.SetActive(true);
+
         //GameObject.Instantiate(doctor);
         //patient1 = Instantiate(patient);
         //patient1.GetComponent<Camera>().tag = "MainCamera";

@@ -16,25 +16,42 @@ public class Doctor : NetworkBehaviour
     public int doctorID;
     private int bandaidsSold;
     private int stitchesSold;
-
+    
     // Start is called before the first frame update
     void Start()
     {
-        //gameObject.name = "Local";
-        if (isLocalPlayer)
-        {
-            PlayerCamera.SetActive(true);
-        }
-        else
-        {
-            PlayerCamera.SetActive(false);
-        }
+        gameObject.name = "Local";
+
+
+        /* 
+         if (isLocalPlayer)
+         {
+             PlayerCamera.SetActive(true);
+         }
+         else
+         {
+             PlayerCamera.SetActive(false);
+         }
+         */
         money = 0;
         bandaidsSold = 0;
         stitchesSold = 0;
         inOffice = true;
         GlobalVariables.doctorList.Add(this);
         doctorID = GlobalVariables.doctorList.Count;
+    }
+    /*
+    public override void OnStartLocalPlayer()
+    {
+        base.OnStartLocalPlayer();
+        gameObject.name = "Local";
+    }
+    */
+    public override void OnStartLocalPlayer()
+    {
+        base.OnStartLocalPlayer();
+        // gameObject.name = "Local";
+
     }
 
     // Update is called once per frame
