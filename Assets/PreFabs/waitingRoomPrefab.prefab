@@ -2781,7 +2781,6 @@ GameObject:
   - component: {fileID: 4197865306273925618}
   - component: {fileID: 8874187572517199708}
   - component: {fileID: 6838093192027681008}
-  - component: {fileID: 5787451949116551743}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -2873,30 +2872,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4005515748758727675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd9551565da30043aab24d9dec0e2fc, type: 3}
+  m_Script: {fileID: 11500000, guid: bd619ef88d04747029184faefe156fb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  active: 0
-  coordsToPlace: {x: 0, y: 0}
-  officeCoords: {x: 0, y: 0}
-  doorID: 0
---- !u!114 &5787451949116551743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4005515748758727675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
+  active: 1
 --- !u!1 &4096578537554140204
 GameObject:
   m_ObjectHideFlags: 0
