@@ -139,6 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd9551565da30043aab24d9dec0e2fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   active: 1
   coordsToPlace: {x: 700, y: 200}
   officeCoords: {x: 4300, y: -3000}
@@ -151,6 +153,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+
   - component: {fileID: 202638983}
   - component: {fileID: 202638982}
   - component: {fileID: 202638981}
@@ -168,6 +171,7 @@ AudioListener:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   m_GameObject: {fileID: 202638980}
   m_Enabled: 0
 --- !u!20 &202638982
@@ -218,7 +222,7 @@ Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabAsset: {fileID: 0
   m_GameObject: {fileID: 202638980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 425, y: 66, z: -600}
@@ -840,10 +844,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd9551565da30043aab24d9dec0e2fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   active: 1
   coordsToPlace: {x: 200, y: 200}
   officeCoords: {x: 2300, y: -3000}
   doorID: 2
+  playerQueue: []
+--- !u!114 &579896216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579896210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 1239649365
+  serverOnly: 0
+  m_AssetId: 28b8bcd983f9e48009fd368615abdd1e
 --- !u!1 &609987614 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4005515748758727675, guid: 28b8bcd983f9e48009fd368615abdd1e,
@@ -862,10 +884,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd9551565da30043aab24d9dec0e2fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   active: 1
   coordsToPlace: {x: 2200, y: 200}
   officeCoords: {x: 10300, y: -3000}
   doorID: 6
+  playerQueue: []
 --- !u!1001 &626094097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1042,6 +1067,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5787451949116551743, guid: 28b8bcd983f9e48009fd368615abdd1e,
+        type: 3}
+      propertyPath: sceneId
+      value: 3261544033
+      objectReference: {fileID: 0}
     - target: {fileID: 5888907835520740653, guid: 28b8bcd983f9e48009fd368615abdd1e,
         type: 3}
       propertyPath: m_Name
@@ -1142,6 +1172,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787451949116551743, guid: 28b8bcd983f9e48009fd368615abdd1e,
+        type: 3}
+      propertyPath: sceneId
+      value: 2964654982
       objectReference: {fileID: 0}
     - target: {fileID: 5888907835520740653, guid: 28b8bcd983f9e48009fd368615abdd1e,
         type: 3}
@@ -1260,6 +1295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd9551565da30043aab24d9dec0e2fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   active: 1
   coordsToPlace: {x: -300, y: 200}
   officeCoords: {x: 300, y: -3000}
@@ -1294,10 +1331,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd9551565da30043aab24d9dec0e2fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   active: 1
   coordsToPlace: {x: 1700, y: 200}
   officeCoords: {x: 8300, y: -3000}
   doorID: 5
+  playerQueue: []
 --- !u!1001 &1057860485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1306,6 +1346,26 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 118638443609573093, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 730089174204785646, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002234270796300566, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790304754699262324, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821006226419931717, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -1455,6 +1515,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5421770723320441996, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920512164729954681, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7519964046507722073, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1469,6 +1539,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 656434705795891996}
     m_Modifications:
+    - target: {fileID: 5787451949116551743, guid: 28b8bcd983f9e48009fd368615abdd1e,
+        type: 3}
+      propertyPath: sceneId
+      value: 1687690483
+      objectReference: {fileID: 0}
     - target: {fileID: 5888907835520740653, guid: 28b8bcd983f9e48009fd368615abdd1e,
         type: 3}
       propertyPath: m_Name
@@ -1654,6 +1729,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd9551565da30043aab24d9dec0e2fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   active: 1
   coordsToPlace: {x: 1200, y: 200}
   officeCoords: {x: 6300, y: -3000}
@@ -1845,6 +1922,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5787451949116551743, guid: 28b8bcd983f9e48009fd368615abdd1e,
+        type: 3}
+      propertyPath: sceneId
+      value: 1238252134
+      objectReference: {fileID: 0}
     - target: {fileID: 5888907835520740653, guid: 28b8bcd983f9e48009fd368615abdd1e,
         type: 3}
       propertyPath: m_Name
@@ -1951,6 +2033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787451949116551743, guid: 28b8bcd983f9e48009fd368615abdd1e,
+        type: 3}
+      propertyPath: sceneId
+      value: 1454351254
       objectReference: {fileID: 0}
     - target: {fileID: 5888907835520740653, guid: 28b8bcd983f9e48009fd368615abdd1e,
         type: 3}
@@ -2479,6 +2566,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787451949116551743, guid: 28b8bcd983f9e48009fd368615abdd1e,
+        type: 3}
+      propertyPath: sceneId
+      value: 131741786
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787451949116551743, guid: 28b8bcd983f9e48009fd368615abdd1e,
+        type: 3}
+      propertyPath: serverOnly
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5888907835520740653, guid: 28b8bcd983f9e48009fd368615abdd1e,
         type: 3}

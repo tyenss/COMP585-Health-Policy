@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using System;
 
 public class ButtonHandler : MonoBehaviour
 {
     public void BuyStitches()
     {
-        Patient patient = GameObject.Find("Local").GetComponent<Patient>();
+        //Patient patient = GameObject.Find("Local").GetComponent<Patient>();
+        Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.isLocalPlayer);
         if (patient.roomID > 0)
         {
             Doctor doctor = GlobalVariables.doctorList.Find(x => x.doctorID == patient.roomID);
@@ -21,13 +23,14 @@ public class ButtonHandler : MonoBehaviour
                 patient.transform.position = new Vector3(0f, 0f, 0f);
             }
             patient.cured.text = "Treated: " + patient.cure.ToString();
-            EnableDisableButtons(false);
+            Patient.EnableDisableButtons(false);
         }
     }
 
     public void BuyBandaid()
     {
-        Patient patient = GameObject.Find("Local").GetComponent<Patient>();
+        //Patient patient = GameObject.Find("Local").GetComponent<Patient>();
+        Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.isLocalPlayer);
         if (patient.roomID > 0)
         {
             Doctor doctor = GlobalVariables.doctorList.Find(x => x.doctorID == patient.roomID);
@@ -40,43 +43,32 @@ public class ButtonHandler : MonoBehaviour
                 patient.transform.position = new Vector3(0f, 0f, 0f);
             }
             patient.cured.text = "Treated: " + patient.cure.ToString();
-            EnableDisableButtons(false);
+            Patient.EnableDisableButtons(false);
         }
     }
 
     public void EnterRoom()
     {
-        Patient patient = GameObject.Find("Local").GetComponent<Patient>();
-        if (patient.GetDoor() != null)
+        //Patient patient = GameObject.Find("Local").GetComponent<Patient>();
+        Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.isLocalPlayer);
+        Door door = patient.GetDoor();
+        if (door != null)
         {
-            patient.roomID = patient.GetDoor().doorID;
-            patient.GetDoor().PopQueue();
+            patient.roomID = door.doorID;
+            patient.CmdPopQueue(door.doorID);
         }
     }
 
     public void LeaveRoom()
     {
-        Patient patient = GameObject.Find("Local").GetComponent<Patient>();
+        //Patient patient = GameObject.Find("Local").GetComponent<Patient>();
+        Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.isLocalPlayer);
         patient.roomID = 0;
         patient.transform.position = new Vector3(0f, 0f, 0f);
-        EnableDisableButtons(false);
+        Patient.EnableDisableButtons(false);
     }
 
-    /// <summary>
-    /// Makes patient buttons active or inactive
-    /// </summary>
-    /// <param name="b">true: active, false: inactive</param>
-    public static void EnableDisableButtons(bool b)
-    {
-        if (GlobalVariables.buttons.Count == 0)
-        {
-            GlobalVariables.buttons.AddRange(GameObject.FindGameObjectsWithTag("PatientButton"));
-        }
-        foreach (GameObject button in GlobalVariables.buttons)
-        {
-            button.SetActive(b);
-        }
-    }
+    
 
     public void SetBandaidPrice()
     {
@@ -87,14 +79,14 @@ public class ButtonHandler : MonoBehaviour
         {
             doctor.bandaidPrice = price;
         }
-        EnableDisableButtons(false);
+        Patient.EnableDisableButtons(false);
     }
 
     public void SetStitchesPrice()
     {
         Doctor doctor = GameObject.Find("Local").GetComponent<Doctor>();
         Text text = GameObject.Find("StitchesText").GetComponent<Text>();
-        int price = System.Int32.Parse(text.text);
+        int price = Int32.Parse(text.text);
         if (price >= GlobalVariables.stitchesCost)
         {
             doctor.stitchesPrice = price;
@@ -105,6 +97,7 @@ public class ButtonHandler : MonoBehaviour
     {
         Doctor doctor = GameObject.Find("Local").GetComponent<Doctor>();
         Door door = FindObjectsOfType<Door>().First(x => x.doorID == doctor.doctorID);
-        door.PopQueue();
+        Patient patient = door.playerQueue.First();
+        patient.CmdPopQueue(door.doorID);
     }
 }
