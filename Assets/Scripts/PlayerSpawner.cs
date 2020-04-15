@@ -84,10 +84,22 @@ using UnityEngine;
             if (_characterPrefabs[index].Prefab == null)
                 return;
 
-            //Choose a random position.
-
+        //Choose a random position.
+        //GameObject result;
+        //if (characterType == 1)
+        //{
+        //    vector3 pos = new vector3(0, 0, 0);
+        //    result = instantiate(_characterprefabs[index].prefab, pos, quaternion.identity);
+        //}
+        //else 
+        //{
+        //    Vector3 pos = new Vector3(40, 0, 0);
+        //    result = Instantiate(_characterPrefabs[index].Prefab, pos, Quaternion.identity);
+        //}
+            
             Vector3 pos = new Vector3(UnityEngine.Random.Range(-2f, 2f), 1f, UnityEngine.Random.Range(-2f, 2f));
             GameObject result = Instantiate(_characterPrefabs[index].Prefab, pos, Quaternion.identity);
+           
 
             //Spawn over server giving authority to the client calling this command.
             NetworkServer.Spawn(result, base.netIdentity.connectionToClient);
