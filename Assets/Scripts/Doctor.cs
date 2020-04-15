@@ -19,6 +19,8 @@ public class Doctor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bandaidPrice = GlobalVariables.bandaidCost;
+        stitchesPrice = GlobalVariables.stitchesCost;
         //if (isLocalPlayer)
         //{
         //    PlayerCamera.SetActive(true);
