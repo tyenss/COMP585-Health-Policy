@@ -164,7 +164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &224560598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,6 +361,11 @@ PrefabInstance:
     - target: {fileID: 1409651565887743479, guid: e76e4d134a4b843eca33efd133dcefec,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348469484335972090, guid: e76e4d134a4b843eca33efd133dcefec,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4123592356929240661, guid: e76e4d134a4b843eca33efd133dcefec,
@@ -1395,6 +1400,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 730089174204785646, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002234270796300566, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790304754699262324, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821006226419931717, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4138482271510898292, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1540,6 +1565,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5421770723320441996, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920512164729954681, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7519964046507722073, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1648,30 +1683,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1072734744}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1213935080 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4962907175208003016, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
-    type: 3}
-  m_PrefabInstance: {fileID: 1057860485}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1213935081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1213935080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e81c0bf7cde4db47b860f579a119339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerCamera: {fileID: 0}
-  bandaidPrice: 0
-  stitchesPrice: 0
-  inOffice: 0
-  money: 0
-  doctorID: 0
 --- !u!1 &1501659889
 GameObject:
   m_ObjectHideFlags: 0

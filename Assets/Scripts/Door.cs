@@ -23,11 +23,6 @@ public class Door : NetworkBehaviour
         playerQueue = new List<Patient>();
     }
 
-    void Start()
-    {
-        
-    }
-
     /// database access for queue
     //public void queueDB()
     //{
@@ -60,10 +55,12 @@ public class Door : NetworkBehaviour
     void OnMouseDown()
     {
         //Patient player = FindObjectOfType(typeof(Patient)) as Patient;
-        Patient player = GameObject.Find("Local").GetComponent<Patient>();
+        //Patient player = GameObject.Find("Local").GetComponent<Patient>();
+        Patient player = GameObject.FindObjectsOfType<Patient>().First(x => x.isLocalPlayer);
+        var asdf = FindObjectsOfType<Patient>();
         if (!this.playerQueue.Contains(player))
         {
-            player.CmdAddToQueue(player.GetInstanceID(), this.doorID);
+            player.CmdAddToQueue(player.netId, this.doorID);
         }
         //if (!this.playerQueue.Contains(playerQueue.Where(x => x.patient == player)))
         //{

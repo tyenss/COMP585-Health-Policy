@@ -7,7 +7,6 @@ using Mirror;
 using UnityEngine.UI;
 using System.Linq;
 
-[Serializable]
 public class Patient : NetworkBehaviour
 {
     public GameObject PlayerCamera;
@@ -30,10 +29,11 @@ public class Patient : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.name = "Local";
+        //gameObject.name = "Local";
         if (isLocalPlayer)
         {
             PlayerCamera.SetActive(true);
+            CmdAddPatientToList(this.netId);
         }
         else
         {
@@ -41,7 +41,6 @@ public class Patient : NetworkBehaviour
         }
         door = null;
         cure = Cure.None;
-        GlobalVariables.patientList.Add(this);
         patientID = GlobalVariables.patientList.Count;
         health.text = String.Concat("Health: :",GetRandomHealth().ToString());
         EnableDisableButtons(false);
@@ -69,8 +68,9 @@ public class Patient : NetworkBehaviour
     {
         if (newDoor == null)
         {
+            return;
             //Edge case that should not occur
-            CmdRemovePatientinQueue(this.GetInstanceID(), door.doorID);
+            //CmdRemovePatientinQueue(this.GetInstanceID(), door.doorID);
         }
         if (!newDoor.active)
         {
@@ -78,7 +78,7 @@ public class Patient : NetworkBehaviour
         }
         if (door != null)
         {
-            CmdRemovePatientinQueue(this.GetInstanceID(), door.doorID);
+            CmdRemovePatientinQueue(this.netId, door.doorID);
         }
         door = newDoor;
     }
@@ -113,11 +113,9 @@ public class Patient : NetworkBehaviour
     /// </summary>
     /// <param name="instanceID"></param>
     [Command]
-    public void CmdAddToQueue(int instanceID, int doorID)
-    //public void AddToQueue(Patient patient)
+    public void CmdAddToQueue(uint instanceID, int doorID)
     {
-        Patient[] patients = FindObjectsOfType<Patient>();
-        Patient patient = patients.AsEnumerable().First(x => x.GetInstanceID() == instanceID);
+        Patient patient = GlobalVariables.patientList.First(x => x.netId == instanceID);
         Door localDoor = FindObjectsOfType<Door>().First(x => x.doorID == doorID);
         if (patient == null || patient.cure != Patient.Cure.None)
         {
@@ -125,10 +123,9 @@ public class Patient : NetworkBehaviour
         }
         if (patient.GetDoor() != null)
         {
-            CmdRemovePatientinQueue(patient.GetInstanceID(), doorID);
+            CmdRemovePatientinQueue(patient.netId, doorID);
         }
         localDoor.playerQueue.Add(patient);
-        //this.playerQueue.Add(new Player(patient));
         patient.NewDoor(localDoor);
         patient.transform.position = new Vector3(
             localDoor.coordsToPlace.x,
@@ -142,19 +139,13 @@ public class Patient : NetworkBehaviour
     /// <returns>patient in front of queue. If queue is empty, returns null</returns>
     [Command]
     public void CmdPopQueue(int doorID)
-    //public Patient PopQueue()
     {
         Door localDoor = FindObjectsOfType<Door>().First(x => x.doorID == doorID);
-        //if (this.playerQueue.First<Patient>() == null)
-        //{
-        //    return null;
-        //}
         if (!localDoor.playerQueue.Any())
         {
-            return;// null;
+            return;
         }
         Patient popped = localDoor.playerQueue.First();
-        //Patient popped = this.playerQueue.First<Player>().patient;
         localDoor.playerQueue.RemoveAt(0);
         if (localDoor.playerQueue.Any())
         {
@@ -164,38 +155,32 @@ public class Patient : NetworkBehaviour
                     localDoor.coordsToPlace.y + 100,
                     patient.transform.position.z);
             }
-            //foreach (Player patient in playerQueue)
-            //{
-            //    patient.patient.transform.position = new Vector3(coordsToPlace.x,
-            //        coordsToPlace.y + 100,
-            //        patient.patient.transform.position.z);
-            //}
         }
         popped.NewDoor(null);
         popped.roomID = doorID;
         popped.transform.position = localDoor.officeCoords;
         EnableDisableButtons(true);
-        //return popped;
     }
 
     /// <summary>
     /// Removes patient in the queue, irregardless of position
     /// </summary>
     [Command]
-    public void CmdRemovePatientinQueue(int instanceID, int doorID)
-    //public void RemovePatientinQueue(Patient patient)
+    public void CmdRemovePatientinQueue(uint instanceID, int doorID)
     {
-        Patient[] patients = FindObjectsOfType<Patient>();
-        Patient patient = patients.AsEnumerable().First(x => x.GetInstanceID() == instanceID);
+        Patient patient = GlobalVariables.patientList.First(x => x.netId == instanceID);
+        //Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.isLocalPlayer);
         Door localDoor = FindObjectsOfType<Door>().First(x => x.doorID == doorID);
         if (localDoor.playerQueue.Contains(patient))
         {
             localDoor.playerQueue.Remove(patient);
         }
-        //if (this.playerQueue.Contains(playerQueue.Where(x => x.patient == patient)))
-        //{
-        //    this.playerQueue.Remove(playerQueue.First(x => x.patient == patient));
-        //}
+    }
+
+    [Command]
+    public void CmdAddPatientToList(uint instanceID)
+    {
+        GlobalVariables.patientList.Add(FindObjectsOfType<Patient>().First(x => x.netId == instanceID));
     }
 
     /// <summary>
@@ -213,4 +198,38 @@ public class Patient : NetworkBehaviour
             button.SetActive(b);
         }
     }
+
+    //[ClientRpc]
+    //public void RpcPopQueue(uint doorId)
+    //{
+    //    Door door = FindObjectsOfType<Door>().First(x => x.netId == doorId);
+    //    //door.playerQueue.
+    //}
+
+    //[ClientRpc]
+    //public void RpcRemovePatientInQueue(uint doorId)
+    //{
+    //    Door door = FindObjectsOfType<Door>().First(x => x.netId == doorId);
+    //}
+
+    //[ClientRpc]
+    //public void RpcAddToQueue(uint doorId, uint instanceID)
+    //{
+    //    Door door = FindObjectsOfType<Door>().First(x => x.netId == doorId);
+    //    Patient patient = GlobalVariables.patientList.First(x => x.netId == instanceID);
+    //    if (patient == null || patient.cure != Patient.Cure.None)
+    //    {
+    //        return;
+    //    }
+    //    if (patient.GetDoor() != null)
+    //    {
+    //        CmdRemovePatientinQueue(patient.netId, doorID);
+    //    }
+    //    localDoor.playerQueue.Add(patient);
+    //    patient.NewDoor(localDoor);
+    //    patient.transform.position = new Vector3(
+    //        localDoor.coordsToPlace.x,
+    //        localDoor.coordsToPlace.y - (float)((localDoor.playerQueue.Count() - 1) * 100),
+    //        patient.transform.position.z);
+    //}
 }
