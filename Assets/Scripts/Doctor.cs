@@ -20,18 +20,6 @@ public class Doctor : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< QueueManager
-        bandaidPrice = GlobalVariables.bandaidCost;
-        stitchesPrice = GlobalVariables.stitchesCost;
-        //if (isLocalPlayer)
-        //{
-        //    PlayerCamera.SetActive(true);
-        //}
-        //else
-        //{
-        //    PlayerCamera.SetActive(false);
-        //}
-=======
         gameObject.name = "Local";
 
 
@@ -45,7 +33,6 @@ public class Doctor : NetworkBehaviour
              PlayerCamera.SetActive(false);
          }
          */
->>>>>>> master
         money = 0;
         bandaidsSold = 0;
         stitchesSold = 0;
