@@ -6,8 +6,10 @@ public class SceneMove : MonoBehaviour
 {
     public Vector3 waitingRoom;
     //public Door door;
-    public Patient patient;
+    //public Patient patient;
 
+
+    
     public void MoveToOffice(Door door, Vector3 newPosition)
     {
         //Patient patient = door.PopQueue();
@@ -22,20 +24,24 @@ public class SceneMove : MonoBehaviour
     public void Update()
     {
         //Must be added to a button for the doctor in the future
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
-            //move to office
-            if (patient.GetDoor() != null)
-            {
-                patient.transform.position = patient.GetDoor().officeCoords;
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha9))
+        //{
+        //    Patient patient = GameObject.Find("Local").GetComponent<Patient>();
+        //    //move to office
+        //    if (patient.GetDoor() != null)
+        //    {
+        //        //patient.transform.position = patient.GetDoor().officeCoords;
+        //        patient.transform.position = patient.GetDoor().officeCoords;
+        //    }
+        //}
 
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            //move to lobby
-            Patient player = FindObjectOfType(typeof(Patient)) as Patient; //Fix for networking code
-            player.transform.position = waitingRoom;
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha0))
+        //{
+        //    Patient patient = GameObject.Find("Local").GetComponent<Patient>();
+        //    //move to lobby
+        //    //Patient player = FindObjectOfType(typeof(Patient)) as Patient; //Fix for networking code
+        //    patient.GetDoor().RemovePatientinQueue(patient);
+        //    patient.transform.position = waitingRoom;
+        //}
     }
 }

@@ -14,30 +14,30 @@ public class Door : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-           playerQueue = new Queue<Patient>();
+        playerQueue = new Queue<Patient>();
     }
 
     /// database access for queue
-    public void queueDB()
-    {
-        StartCoroutine(addPatient());
-    }
+    //public void queueDB()
+    //{
+    //    StartCoroutine(addPatient());
+    //}
  
-    IEnumerator addPatient()
-    {
-        WWWForm form = new WWWForm();
-        ///form.AddField("name", player.name);
-        WWW www = new WWW("http://localhost/sqlconnect/connection.php");
-        yield return www;
-        if (www.text == "0")
-        {
-            Debug.Log("Patient added successfully");
-        }
-        else 
-        {
-            Debug.Log("error");
-        }
-    }
+    //IEnumerator addPatient()
+    //{
+    //    WWWForm form = new WWWForm();
+    //    ///form.AddField("name", player.name);
+    //    WWW www = new WWW("http://localhost/sqlconnect/connection.php");
+    //    yield return www;
+    //    if (www.text == "0")
+    //    {
+    //        Debug.Log("Patient added successfully");
+    //    }
+    //    else 
+    //    {
+    //        Debug.Log("error");
+    //    }
+    //}
 
 
 
@@ -48,7 +48,8 @@ public class Door : MonoBehaviour
     /// </summary>
     void OnMouseDown()
     {
-        Patient player = FindObjectOfType(typeof(Patient)) as Patient;
+        //Patient player = FindObjectOfType(typeof(Patient)) as Patient;
+        Patient player = GameObject.Find("Local").GetComponent<Patient>();
         if (!playerQueue.Contains(player))
         {
             AddToQueue(player);
@@ -56,14 +57,18 @@ public class Door : MonoBehaviour
     }
 
     /// <summary>
-    /// If patient is null, nothing happens
+    /// If patient is null or is cured, nothing happens
     /// </summary>
     /// <param name="patient"></param>
     public void AddToQueue(Patient patient)
     {
-        if (patient == null)
+        if (patient == null || patient.cure != Patient.Cure.None)
         {
             return;
+        }
+        if (patient.GetDoor() != null)
+        {
+            patient.GetDoor().RemovePatientinQueue(patient);
         }
         patient.NewDoor(this);
         patient.transform.position = new Vector3(
@@ -91,13 +96,14 @@ public class Door : MonoBehaviour
                 patient.transform.position.z);
         }
         popped.NewDoor(null);
+        popped.roomID = doorID;
         return popped;
     }
 
     /// <summary>
     /// Gets rid of a patient in the queue, no matter where they are at
     /// </summary>
-    public void DeletePatientinQueue(Patient patient)
+    public void RemovePatientinQueue(Patient patient)
     {
         if (playerQueue.Contains(patient))
         {
