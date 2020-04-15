@@ -123,7 +123,7 @@ public class Patient : NetworkBehaviour
         }
         if (patient.GetDoor() != null)
         {
-            CmdRemovePatientinQueue(patient.netId, doorID);
+            patient.GetDoor().playerQueue.Remove(patient);
         }
         localDoor.playerQueue.Add(patient);
         patient.NewDoor(localDoor);
@@ -131,6 +131,8 @@ public class Patient : NetworkBehaviour
             localDoor.coordsToPlace.x,
             localDoor.coordsToPlace.y - (float)((localDoor.playerQueue.Count() - 1) * 100),
             patient.transform.position.z);
+
+        RpcAddToQueue(localDoor.netId, instanceID);
     }
 
     /// <summary>
@@ -160,6 +162,8 @@ public class Patient : NetworkBehaviour
         popped.roomID = doorID;
         popped.transform.position = localDoor.officeCoords;
         EnableDisableButtons(true);
+        RpcPopQueue(localDoor.netId);
+
     }
 
     /// <summary>
@@ -169,12 +173,13 @@ public class Patient : NetworkBehaviour
     public void CmdRemovePatientinQueue(uint instanceID, int doorID)
     {
         Patient patient = GlobalVariables.patientList.First(x => x.netId == instanceID);
-        //Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.isLocalPlayer);
         Door localDoor = FindObjectsOfType<Door>().First(x => x.doorID == doorID);
         if (localDoor.playerQueue.Contains(patient))
         {
             localDoor.playerQueue.Remove(patient);
         }
+        RpcRemovePatientInQueue(localDoor.netId, instanceID);
+
     }
 
     [Command]
@@ -199,37 +204,60 @@ public class Patient : NetworkBehaviour
         }
     }
 
-    //[ClientRpc]
-    //public void RpcPopQueue(uint doorId)
-    //{
-    //    Door door = FindObjectsOfType<Door>().First(x => x.netId == doorId);
-    //    //door.playerQueue.
-    //}
+    [ClientRpc]
+    public void RpcAddToQueue(uint doorId, uint instanceID)
+    {
+        Door door = FindObjectsOfType<Door>().First(x => x.netId == doorId);
+        Patient patient = GlobalVariables.patientList.First(x => x.netId == instanceID);
+        if (patient == null || patient.cure != Patient.Cure.None)
+        {
+            return;
+        }
+        if (patient.GetDoor() != null)
+        {
+            patient.GetDoor().playerQueue.Remove(patient);
+        }
+        door.playerQueue.Add(patient);
+        patient.NewDoor(door);
+        patient.transform.position = new Vector3(
+            door.coordsToPlace.x,
+            door.coordsToPlace.y - (float)((door.playerQueue.Count() - 1) * 100),
+            patient.transform.position.z);
+    }
 
-    //[ClientRpc]
-    //public void RpcRemovePatientInQueue(uint doorId)
-    //{
-    //    Door door = FindObjectsOfType<Door>().First(x => x.netId == doorId);
-    //}
+    [ClientRpc]
+    public void RpcPopQueue(uint doorId)
+    {
+        Door localDoor = FindObjectsOfType<Door>().First(x => x.netId == doorId);
+        if (!localDoor.playerQueue.Any())
+        {
+            return;
+        }
+        Patient popped = localDoor.playerQueue.First();
+        localDoor.playerQueue.RemoveAt(0);
+        if (localDoor.playerQueue.Any())
+        {
+            foreach (Patient patient in localDoor.playerQueue)
+            {
+                patient.transform.position = new Vector3(localDoor.coordsToPlace.x,
+                    localDoor.coordsToPlace.y + 100,
+                    patient.transform.position.z);
+            }
+        }
+        popped.NewDoor(null);
+        popped.roomID = localDoor.doorID;
+        popped.transform.position = localDoor.officeCoords;
+        EnableDisableButtons(true);
+    }
 
-    //[ClientRpc]
-    //public void RpcAddToQueue(uint doorId, uint instanceID)
-    //{
-    //    Door door = FindObjectsOfType<Door>().First(x => x.netId == doorId);
-    //    Patient patient = GlobalVariables.patientList.First(x => x.netId == instanceID);
-    //    if (patient == null || patient.cure != Patient.Cure.None)
-    //    {
-    //        return;
-    //    }
-    //    if (patient.GetDoor() != null)
-    //    {
-    //        CmdRemovePatientinQueue(patient.netId, doorID);
-    //    }
-    //    localDoor.playerQueue.Add(patient);
-    //    patient.NewDoor(localDoor);
-    //    patient.transform.position = new Vector3(
-    //        localDoor.coordsToPlace.x,
-    //        localDoor.coordsToPlace.y - (float)((localDoor.playerQueue.Count() - 1) * 100),
-    //        patient.transform.position.z);
-    //}
+    [ClientRpc]
+    public void RpcRemovePatientInQueue(uint doorId, uint instanceID)
+    {
+        Patient patient = GlobalVariables.patientList.First(x => x.netId == instanceID);
+        Door localDoor = FindObjectsOfType<Door>().First(x => x.netId == doorId);
+        if (localDoor.playerQueue.Contains(patient))
+        {
+            localDoor.playerQueue.Remove(patient);
+        }
+    }
 }
