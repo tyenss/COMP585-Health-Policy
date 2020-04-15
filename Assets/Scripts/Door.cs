@@ -2,19 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Mirror;
+using System;
 
-public class Door : MonoBehaviour
+//[System.Serializable]
+public class Door : NetworkBehaviour
 {
     public bool active;
     public Vector2 coordsToPlace;
     public Vector2 officeCoords;
     public int doorID;
-    private Queue<Patient> playerQueue; //May change to linked list if performance is big issue
 
+    //public readonly SyncListPatient playerQueue = new SyncListPatient();
+
+    //private readonly SyncListItem playerQueue = new SyncListItem(); //May change to linked list if performance is big issue
+    private List<Patient> playerQueue;
     // Start is called before the first frame update
     void Awake()
     {
-        playerQueue = new Queue<Patient>();
+        playerQueue = new List<Patient>();
     }
 
     /// database access for queue
@@ -50,16 +56,20 @@ public class Door : MonoBehaviour
     {
         //Patient player = FindObjectOfType(typeof(Patient)) as Patient;
         Patient player = GameObject.Find("Local").GetComponent<Patient>();
-        if (!playerQueue.Contains(player))
+        if (!this.playerQueue.Contains(player))
         {
             AddToQueue(player);
         }
+        //if (!this.playerQueue.Contains(playerQueue.Where(x => x.patient == player)))
+        //{
+        //    AddToQueue(player);
+        //}
     }
 
     /// <summary>
     /// If patient is null or is cured, nothing happens
     /// </summary>
-    /// <param name="patient"></param>
+    /// <param name="patient"></param>`
     public void AddToQueue(Patient patient)
     {
         if (patient == null || patient.cure != Patient.Cure.None)
@@ -70,12 +80,13 @@ public class Door : MonoBehaviour
         {
             patient.GetDoor().RemovePatientinQueue(patient);
         }
+        this.playerQueue.Add(patient);
+        //this.playerQueue.Add(new Player(patient));
         patient.NewDoor(this);
         patient.transform.position = new Vector3(
             coordsToPlace.x,
-            coordsToPlace.y - (float)(playerQueue.Count() * 100),
+            coordsToPlace.y - (float)((playerQueue.Count() - 1) * 100),
             patient.transform.position.z);
-        playerQueue.Enqueue(patient);
     }
 
     /// <summary>
@@ -84,11 +95,17 @@ public class Door : MonoBehaviour
     /// <returns>patient in front of queue. If queue is empty, returns null</returns>
     public Patient PopQueue()
     {
-        if (playerQueue.Peek() == null)
+        //if (this.playerQueue.First<Patient>() == null)
+        //{
+        //    return null;
+        //}
+        if (!this.playerQueue.Any())
         {
             return null;
         }
-        Patient popped = playerQueue.Dequeue();
+        Patient popped = playerQueue.First();
+        //Patient popped = this.playerQueue.First<Player>().patient;
+        this.playerQueue.RemoveAt(0);
         if (playerQueue.Any())
         {
             foreach (Patient patient in playerQueue)
@@ -97,6 +114,12 @@ public class Door : MonoBehaviour
                     coordsToPlace.y + 100,
                     patient.transform.position.z);
             }
+            //foreach (Player patient in playerQueue)
+            //{
+            //    patient.patient.transform.position = new Vector3(coordsToPlace.x,
+            //        coordsToPlace.y + 100,
+            //        patient.patient.transform.position.z);
+            //}
         }
         popped.NewDoor(null);
         popped.roomID = doorID;
@@ -110,9 +133,13 @@ public class Door : MonoBehaviour
     /// </summary>
     public void RemovePatientinQueue(Patient patient)
     {
-        if (playerQueue.Contains(patient))
+        if (this.playerQueue.Contains(patient))
         {
-            playerQueue = new Queue<Patient>(playerQueue.Where(s => s != patient));
+            this.playerQueue.Remove(patient);
         }
+        //if (this.playerQueue.Contains(playerQueue.Where(x => x.patient == patient)))
+        //{
+        //    this.playerQueue.Remove(playerQueue.First(x => x.patient == patient));
+        //}
     }
 }

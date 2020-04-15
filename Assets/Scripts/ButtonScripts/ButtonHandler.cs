@@ -20,7 +20,7 @@ public class ButtonHandler : MonoBehaviour
                 patient.roomID = 0;
                 patient.transform.position = new Vector3(0f, 0f, 0f);
             }
-            patient.cured.text = "Cured: Yes";
+            patient.cured.text = "Treated: " + patient.cure.ToString();
             EnableDisableButtons(false);
         }
     }
@@ -39,7 +39,7 @@ public class ButtonHandler : MonoBehaviour
                 patient.roomID = 0;
                 patient.transform.position = new Vector3(0f, 0f, 0f);
             }
-            patient.cured.text = "Cured: Yes";
+            patient.cured.text = "Treated: " + patient.cure.ToString();
             EnableDisableButtons(false);
         }
     }
@@ -50,9 +50,7 @@ public class ButtonHandler : MonoBehaviour
         if (patient.GetDoor() != null)
         {
             patient.roomID = patient.GetDoor().doorID;
-            //this.transform.position = this.GetDoor().officeCoords;
             patient.GetDoor().PopQueue();
-            //this.door = null;
         }
     }
 
@@ -61,6 +59,7 @@ public class ButtonHandler : MonoBehaviour
         Patient patient = GameObject.Find("Local").GetComponent<Patient>();
         patient.roomID = 0;
         patient.transform.position = new Vector3(0f, 0f, 0f);
+        EnableDisableButtons(false);
     }
 
     /// <summary>
@@ -82,20 +81,23 @@ public class ButtonHandler : MonoBehaviour
     public void SetBandaidPrice()
     {
         Doctor doctor = GameObject.Find("Local").GetComponent<Doctor>();
-        int price = 0;
-        if (price <= GlobalVariables.bandaidCost)
+        Text text = GameObject.Find("BandaidText").GetComponent<Text>();
+        int price = System.Int32.Parse(text.text);
+        if (price >= GlobalVariables.bandaidCost)
         {
-            
+            doctor.bandaidPrice = price;
         }
+        EnableDisableButtons(false);
     }
 
     public void SetStitchesPrice()
     {
         Doctor doctor = GameObject.Find("Local").GetComponent<Doctor>();
-        int price = 0;
-        if (price <= GlobalVariables.stitchesCost)
+        Text text = GameObject.Find("StitchesText").GetComponent<Text>();
+        int price = System.Int32.Parse(text.text);
+        if (price >= GlobalVariables.stitchesCost)
         {
-
+            doctor.stitchesPrice = price;
         }
     }
 

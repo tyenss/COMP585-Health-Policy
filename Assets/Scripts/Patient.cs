@@ -6,6 +6,7 @@ using UnityEngine.Networking;
 using Mirror;
 using UnityEngine.UI;
 
+[Serializable]
 public class Patient : NetworkBehaviour
 {
     public GameObject PlayerCamera;
@@ -16,6 +17,7 @@ public class Patient : NetworkBehaviour
     public int money;
     public int patientID;
     public string patientName;
+
     private Door door; //door that the player is in queue, null if not
 
     public Text health;
@@ -42,6 +44,7 @@ public class Patient : NetworkBehaviour
         patientID = GlobalVariables.patientList.Count;
         health.text = String.Concat("Health: :",GetRandomHealth().ToString());
         ButtonHandler.EnableDisableButtons(false);
+        //this.gameObject.GetComponent<Camera>().
     }
 
     void Update()
@@ -57,13 +60,13 @@ public class Patient : NetworkBehaviour
     public override void OnStartLocalPlayer()
     {
         base.OnStartLocalPlayer();
-       // gameObject.name = "Local";
-        
+
     }
     
 
     public void NewDoor(Door newDoor)
     {
+        //GameObject.Instantiate(
         if (newDoor == null)
         {
             door = newDoor;
@@ -94,10 +97,11 @@ public class Patient : NetworkBehaviour
     private int GetRandomHealth()
     {
         System.Random random = new System.Random();
-        int num = random.Next(0, 2);
+        int num = random.Next(0, 10);
         for (int i = 1; i < 10; i++)
         {
-            num = (int)(random.Next(0,2) * Math.Pow(10, i)) + num;
+            int nextNumber = (int)random.Next(0, 10);
+            num = nextNumber > GlobalVariables.chanceOfOne ? (int)(1 * Math.Pow(10, i)) + num : (int)(0 * Math.Pow(10, i) + num);
         }
         return num;
     }
