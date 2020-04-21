@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+
 //using Unity.
 
 public class GlobalVariables : MonoBehaviour
@@ -12,6 +14,8 @@ public class GlobalVariables : MonoBehaviour
     public static int maxDoctors;
     public static int patientMoney;
     public static int numberOfRounds;
+    public static int docIndex = 0;
+
 
     public static List<Patient> patientList;
     public static List<Doctor> doctorList;
@@ -26,4 +30,6 @@ public class GlobalVariables : MonoBehaviour
         doctorList = new List<Doctor>();
         buttons = new List<GameObject>();
     }
+
+
 }

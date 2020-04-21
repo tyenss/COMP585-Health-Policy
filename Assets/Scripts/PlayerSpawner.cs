@@ -8,6 +8,11 @@ using UnityEngine;
 
     public class PlayerSpawner : NetworkBehaviour
     {
+    public Vector3[] pos = new[] { new Vector3(420f, -2800f, 0f), new Vector3(2420f, -2800f, 0f), new Vector3(4420f, -2800f, 0f), new Vector3(6420f, -2800f, 0f), new Vector3(8420f, -2800f, 0f), new Vector3(10420f, -2800f, 0f) };
+    
+   
+    //==420
+    
         #region Types.
         [System.Serializable]
         private class CharacterPrefab
@@ -85,20 +90,23 @@ using UnityEngine;
                 return;
 
         //Choose a random position.
-        //GameObject result;
-        //if (characterType == 1)
-        //{
-        //    vector3 pos = new vector3(0, 0, 0);
-        //    result = instantiate(_characterprefabs[index].prefab, pos, quaternion.identity);
-        //}
-        //else 
-        //{
-        //    Vector3 pos = new Vector3(40, 0, 0);
-        //    result = Instantiate(_characterPrefabs[index].Prefab, pos, Quaternion.identity);
-        //}
+        GameObject result;
+       
+       if (characterType == 1)
+       {
+          Vector3 pos1 = new Vector3(0, 0, 0);
+           result = Instantiate(_characterPrefabs[index].Prefab, pos1, Quaternion.identity);
+       }
+        else 
+        {
+        //Vector3 pos = new Vector3(doctorx, -2800f, 0f);
+          result = Instantiate(_characterPrefabs[index].Prefab, pos[GlobalVariables.docIndex], Quaternion.identity);
+            GlobalVariables.docIndex ++;
             
-            Vector3 pos = new Vector3(UnityEngine.Random.Range(-2f, 2f), 1f, UnityEngine.Random.Range(-2f, 2f));
-            GameObject result = Instantiate(_characterPrefabs[index].Prefab, pos, Quaternion.identity);
+       }
+            
+            //Vector3 pos = new Vector3(UnityEngine.Random.Range(-2f, 2f), 1f, UnityEngine.Random.Range(-2f, 2f));
+            //GameObject result = Instantiate(_characterPrefabs[index].Prefab, pos, Quaternion.identity);
            
 
             //Spawn over server giving authority to the client calling this command.

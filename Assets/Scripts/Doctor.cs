@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Doctor : NetworkBehaviour
 {
-    public GameObject PlayerCamera;
+    //public GameObject PlayerCamera;
     public int bandaidPrice;
     public int stitchesPrice;
     public bool inOffice; //if 0, in lobby; else, in office
@@ -20,7 +20,7 @@ public class Doctor : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< QueueManager
+
         bandaidPrice = GlobalVariables.bandaidCost;
         stitchesPrice = GlobalVariables.stitchesCost;
         //if (isLocalPlayer)
@@ -31,21 +31,7 @@ public class Doctor : NetworkBehaviour
         //{
         //    PlayerCamera.SetActive(false);
         //}
-=======
-        gameObject.name = "Local";
 
-
-        /* 
-         if (isLocalPlayer)
-         {
-             PlayerCamera.SetActive(true);
-         }
-         else
-         {
-             PlayerCamera.SetActive(false);
-         }
-         */
->>>>>>> master
         money = 0;
         bandaidsSold = 0;
         stitchesSold = 0;

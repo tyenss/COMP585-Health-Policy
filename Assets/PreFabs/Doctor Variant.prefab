@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  PlayerCamera: {fileID: 2265081131368877128}
+  PlayerCamera: {fileID: 4835251298876085883}
   bandaidPrice: 0
   stitchesPrice: 0
   inOffice: 0
@@ -499,6 +499,12 @@ GameObject:
 --- !u!4 &1409651565887743479 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5107485099718359295, guid: b5a85490c717c88408f046479f4e1b8a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6156834116946877704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4835251298876085883 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1615450254115507059, guid: b5a85490c717c88408f046479f4e1b8a,
     type: 3}
   m_PrefabInstance: {fileID: 6156834116946877704}
   m_PrefabAsset: {fileID: 0}
