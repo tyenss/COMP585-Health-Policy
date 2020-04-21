@@ -10,7 +10,7 @@ public class ButtonHandler : MonoBehaviour
     public void BuyStitches()
     {
         //Patient patient = GameObject.Find("Local").GetComponent<Patient>();
-        Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.isLocalPlayer);
+        Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.hasAuthority);
         if (patient.roomID > 0)
         {
             Doctor doctor = GlobalVariables.doctorList.Find(x => x.doctorID == patient.roomID);
@@ -30,7 +30,7 @@ public class ButtonHandler : MonoBehaviour
     public void BuyBandaid()
     {
         //Patient patient = GameObject.Find("Local").GetComponent<Patient>();
-        Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.isLocalPlayer);
+        Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.hasAuthority);
         if (patient.roomID > 0)
         {
             Doctor doctor = GlobalVariables.doctorList.Find(x => x.doctorID == patient.roomID);
@@ -50,7 +50,7 @@ public class ButtonHandler : MonoBehaviour
     public void EnterRoom()
     {
         //Patient patient = GameObject.Find("Local").GetComponent<Patient>();
-        Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.isLocalPlayer);
+        Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.hasAuthority);
         Door door = patient.GetDoor();
         if (door != null)
         {
@@ -62,7 +62,7 @@ public class ButtonHandler : MonoBehaviour
     public void LeaveRoom()
     {
         //Patient patient = GameObject.Find("Local").GetComponent<Patient>();
-        Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.isLocalPlayer);
+        Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.hasAuthority);
         patient.roomID = 0;
         patient.transform.position = new Vector3(0f, 0f, 0f);
         Patient.EnableDisableButtons(false);
