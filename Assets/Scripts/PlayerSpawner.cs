@@ -94,13 +94,13 @@ using UnityEngine;
        
        if (characterType == 1)
        {
-          Vector3 pos1 = new Vector3(0, 0, 0);
-           result = Instantiate(_characterPrefabs[index].Prefab, pos1, Quaternion.identity);
+          Vector3 pos1 = new Vector3(UnityEngine.Random.Range(-2f, 500f), 0, 0);
+           result = Instantiate(_characterPrefabs[index].Prefab, pos1, Quaternion.Euler(0,180,0));
        }
         else 
         {
         //Vector3 pos = new Vector3(doctorx, -2800f, 0f);
-          result = Instantiate(_characterPrefabs[index].Prefab, pos[GlobalVariables.docIndex], Quaternion.identity);
+          result = Instantiate(_characterPrefabs[index].Prefab, pos[GlobalVariables.docIndex], Quaternion.Euler(0, 180, 0));
             GlobalVariables.docIndex ++;
             
        }

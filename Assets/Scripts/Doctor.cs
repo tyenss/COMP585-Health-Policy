@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Doctor : NetworkBehaviour
 {
-    //public GameObject PlayerCamera;
+    public GameObject PlayerCamera;
     public int bandaidPrice;
     public int stitchesPrice;
     public bool inOffice; //if 0, in lobby; else, in office

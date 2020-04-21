@@ -30,7 +30,8 @@ public class Patient : NetworkBehaviour
     void Start()
     {
         //gameObject.name = "Local";
-        if (isLocalPlayer)
+        //isLocalPlayer
+        if (base.hasAuthority)
         {
             PlayerCamera.SetActive(true);
             CmdAddPatientToList(this.netId);
@@ -50,7 +51,8 @@ public class Patient : NetworkBehaviour
 
     void Update()
     {
-        if (!isLocalPlayer)
+        //isLocalPlayer
+        if (!base.hasAuthority)
         {
             return;
         }

@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8170738728653200865
 Transform:
   m_ObjectHideFlags: 0
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2265081131368877128}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 13.35}
   m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
   m_Children: []
   m_Father: {fileID: 1409651565887743479}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!20 &4005360279710065541
 Camera:
   m_ObjectHideFlags: 0
@@ -57,9 +57,9 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  field of view: 61.575947
+  orthographic: 1
+  orthographic size: 500
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  PlayerCamera: {fileID: 4835251298876085883}
+  PlayerCamera: {fileID: 2265081131368877128}
   bandaidPrice: 0
   stitchesPrice: 0
   inOffice: 0
@@ -499,12 +499,6 @@ GameObject:
 --- !u!4 &1409651565887743479 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5107485099718359295, guid: b5a85490c717c88408f046479f4e1b8a,
-    type: 3}
-  m_PrefabInstance: {fileID: 6156834116946877704}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4835251298876085883 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1615450254115507059, guid: b5a85490c717c88408f046479f4e1b8a,
     type: 3}
   m_PrefabInstance: {fileID: 6156834116946877704}
   m_PrefabAsset: {fileID: 0}
