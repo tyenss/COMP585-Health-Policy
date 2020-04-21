@@ -56,7 +56,7 @@ public class Door : NetworkBehaviour
     {
         //Patient player = FindObjectOfType(typeof(Patient)) as Patient;
         //Patient player = GameObject.Find("Local").GetComponent<Patient>();
-        Patient player = GameObject.FindObjectsOfType<Patient>().First(x => x.isLocalPlayer);
+        Patient player = GameObject.FindObjectsOfType<Patient>().First(x => x.hasAuthority);
         var asdf = FindObjectsOfType<Patient>();
         if (!this.playerQueue.Contains(player))
         {
