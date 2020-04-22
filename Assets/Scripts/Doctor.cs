@@ -10,6 +10,7 @@ public class Doctor : NetworkBehaviour
     public int bandaidPrice;
     public int stitchesPrice;
     public bool inOffice; //if 0, in lobby; else, in office
+    public Vector3 officeCoord;
 	//public bool hasClient;
 
     public int money;
@@ -20,7 +21,7 @@ public class Doctor : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        gameObject.name = "Local";
         bandaidPrice = GlobalVariables.bandaidCost;
         stitchesPrice = GlobalVariables.stitchesCost;
         //if (isLocalPlayer)
@@ -38,6 +39,7 @@ public class Doctor : NetworkBehaviour
         inOffice = true;
         GlobalVariables.doctorList.Add(this);
         doctorID = GlobalVariables.doctorList.Count;
+        officeCoord = transform.position; 
     }
     /*
     public override void OnStartLocalPlayer()
@@ -108,13 +110,15 @@ public class Doctor : NetworkBehaviour
 	{
 		if (inOffice)
 		{
-            
+            transform.position = new Vector3(0f, 0f, 0f);
+            inOffice = false;
 		}
 		else if (!inOffice)
 		{
+            transform.position = officeCoord;
+            inOffice = true;
+        }
 
-		}
-
-		inOffice = !inOffice;
+		//inOffice = !inOffice;
 	}
 }
