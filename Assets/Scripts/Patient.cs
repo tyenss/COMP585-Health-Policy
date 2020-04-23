@@ -10,6 +10,7 @@ using System.Linq;
 public class Patient : NetworkBehaviour
 {
     public GameObject PlayerCamera;
+    public GameObject canvas;
     public int roomID; //Door ID is used to determine what room patient is in
                        //If roomID = 0, else they are in office
     public enum Cure { None, Bandaid, Stitches };
@@ -35,18 +36,19 @@ public class Patient : NetworkBehaviour
         {
             PlayerCamera.SetActive(true);
             CmdAddPatientToList(this.netId);
+            canvas.SetActive(true);
+
         }
         else
         {
             PlayerCamera.SetActive(false);
+            canvas.SetActive(false);
         }
         door = null;
         cure = Cure.None;
         patientID = GlobalVariables.patientList.Count;
         health.text = String.Concat("Health: :",GetRandomHealth().ToString());
         EnableDisableButtons(false);
-        //money = GlobalVariables.patientMoney;
-        //this.gameObject.GetComponent<Camera>().
     }
 
     void Update()
@@ -130,10 +132,12 @@ public class Patient : NetworkBehaviour
         }
         localDoor.playerQueue.Add(patient);
         patient.NewDoor(localDoor);
-        patient.transform.position = new Vector3(
+        Vector3 patientCoords = new Vector3(
             localDoor.coordsToPlace.x,
             localDoor.coordsToPlace.y - (float)((localDoor.playerQueue.Count() - 1) * 100),
             patient.transform.position.z);
+        patient.transform.position = patientCoords;
+        RpcMovePatient(patientCoords);
     }
 
     /// <summary>
@@ -154,9 +158,9 @@ public class Patient : NetworkBehaviour
         {
             foreach (Patient patient in localDoor.playerQueue)
             {
-                patient.transform.position = new Vector3(localDoor.coordsToPlace.x,
+                RpcMovePatient(new Vector3(localDoor.coordsToPlace.x,
                     localDoor.coordsToPlace.y + 100,
-                    patient.transform.position.z);
+                    patient.transform.position.z));
             }
         }
         popped.NewDoor(null);
@@ -202,37 +206,23 @@ public class Patient : NetworkBehaviour
         }
     }
 
-    //[ClientRpc]
-    //public void RpcPopQueue(uint doorId)
-    //{
-    //    Door door = FindObjectsOfType<Door>().First(x => x.netId == doorId);
-    //    //door.playerQueue.
-    //}
+    [ClientRpc]
+    public void RpcPopQueue(uint doorId)
+    {
+        Door door = FindObjectsOfType<Door>().First(x => x.netId == doorId);
+    }
 
-    //[ClientRpc]
-    //public void RpcRemovePatientInQueue(uint doorId)
-    //{
-    //    Door door = FindObjectsOfType<Door>().First(x => x.netId == doorId);
-    //}
+    [ClientRpc]
+    public void RpcRemovePatientInQueue(uint instanceID, uint doorId)
+    {
+        Door door = FindObjectsOfType<Door>().First(x => x.netId == doorId);
+        Patient patient = GlobalVariables.patientList.First(x => x.netId == instanceID);
 
-    //[ClientRpc]
-    //public void RpcAddToQueue(uint doorId, uint instanceID)
-    //{
-    //    Door door = FindObjectsOfType<Door>().First(x => x.netId == doorId);
-    //    Patient patient = GlobalVariables.patientList.First(x => x.netId == instanceID);
-    //    if (patient == null || patient.cure != Patient.Cure.None)
-    //    {
-    //        return;
-    //    }
-    //    if (patient.GetDoor() != null)
-    //    {
-    //        CmdRemovePatientinQueue(patient.netId, doorID);
-    //    }
-    //    localDoor.playerQueue.Add(patient);
-    //    patient.NewDoor(localDoor);
-    //    patient.transform.position = new Vector3(
-    //        localDoor.coordsToPlace.x,
-    //        localDoor.coordsToPlace.y - (float)((localDoor.playerQueue.Count() - 1) * 100),
-    //        patient.transform.position.z);
-    //}
+    }
+
+    [ClientRpc]
+    public void RpcMovePatient(Vector3 patientCoords)
+    {
+        transform.position = patientCoords;
+    }
 }

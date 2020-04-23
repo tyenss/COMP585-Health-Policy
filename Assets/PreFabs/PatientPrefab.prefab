@@ -219,6 +219,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077902a7cc04742028a633fb2f4becd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1684022827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901597289592199066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c06431dbc25308343959cc1f0b3c59e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  PlayerCamera: {fileID: 9122834945563535228}
+  canvas: {fileID: 7935226995853831279}
+  roomID: 0
+  cure: 0
+  money: 1000
+  patientID: 0
+  patientName: 
+  health: {fileID: 9057632866652647886}
+  cured: {fileID: 6312607010981965662}
+  moneyText: {fileID: 603631597587673103}
+--- !u!114 &1638280690553061228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901597289592199066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
+  compressRotation: 1
+--- !u!114 &5892605100142376453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901597289592199066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
 --- !u!1 &4633302102152032681
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,63 +496,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077902a7cc04742028a633fb2f4becd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1684022827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6901597289592199066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c06431dbc25308343959cc1f0b3c59e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  PlayerCamera: {fileID: 9122834945563535228}
-  roomID: 0
-  cure: 0
-  money: 1000
-  patientID: 0
-  patientName: 
-  health: {fileID: 9057632866652647886}
-  cured: {fileID: 6312607010981965662}
-  moneyText: {fileID: 603631597587673103}
---- !u!114 &1638280690553061228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6901597289592199066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  clientAuthority: 1
-  localPositionSensitivity: 0.01
-  localRotationSensitivity: 0.01
-  localScaleSensitivity: 0.01
-  compressRotation: 1
---- !u!114 &5892605100142376453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6901597289592199066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
 --- !u!1 &9122834945563535228
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,15 +678,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d36c43225f9391e4c8810c98eb7ef85e, type: 3}
---- !u!4 &6915416559149963790 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7880970886039044016, guid: d36c43225f9391e4c8810c98eb7ef85e,
-    type: 3}
-  m_PrefabInstance: {fileID: 3649793649441613246}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6901597289592199066 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7881807149238628900, guid: d36c43225f9391e4c8810c98eb7ef85e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3649793649441613246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6915416559149963790 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7880970886039044016, guid: d36c43225f9391e4c8810c98eb7ef85e,
     type: 3}
   m_PrefabInstance: {fileID: 3649793649441613246}
   m_PrefabAsset: {fileID: 0}
@@ -775,6 +776,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PatientCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426424152225969671, guid: 06241098376484cb6a13b2f0a8263be8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3048613124505220406, guid: 06241098376484cb6a13b2f0a8263be8,
         type: 3}
@@ -1073,18 +1079,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06241098376484cb6a13b2f0a8263be8, type: 3}
---- !u!114 &603631597587673103 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8481611122555251303, guid: 06241098376484cb6a13b2f0a8263be8,
-    type: 3}
-  m_PrefabInstance: {fileID: 9066937772450929256}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6312607010981965662 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3048613124505220406, guid: 06241098376484cb6a13b2f0a8263be8,
@@ -1115,3 +1109,21 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 9066937772450929256}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7935226995853831279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1426424152225969671, guid: 06241098376484cb6a13b2f0a8263be8,
+    type: 3}
+  m_PrefabInstance: {fileID: 9066937772450929256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &603631597587673103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8481611122555251303, guid: 06241098376484cb6a13b2f0a8263be8,
+    type: 3}
+  m_PrefabInstance: {fileID: 9066937772450929256}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -113,6 +113,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   PlayerCamera: {fileID: 2265081131368877128}
+  canvas: {fileID: 5041460139289638434}
   bandaidPrice: 0
   stitchesPrice: 0
   inOffice: 0
@@ -372,6 +373,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 293becacabe7f42129530f34408cb6aa, type: 3}
+--- !u!1 &5041460139289638434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5962692735870858759, guid: 293becacabe7f42129530f34408cb6aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1677978141446111269}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2095609905003623602 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 746605923379967127, guid: 293becacabe7f42129530f34408cb6aa,
