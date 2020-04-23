@@ -100,4 +100,12 @@ public class ButtonHandler : MonoBehaviour
         Patient patient = door.playerQueue.First();
         patient.CmdPopQueue(door.doorID);
     }
+
+    public void ChangeRoom()
+    {
+        Doctor doctor = GameObject.Find("Local").GetComponent<Doctor>();
+
+        doctor.SwitchRooms();
+    }
+
 }
