@@ -128,7 +128,7 @@ public class Patient : NetworkBehaviour
         }
         if (patient.GetDoor() != null)
         {
-            CmdRemovePatientinQueue(patient.netId, doorID);
+            localDoor.playerQueue.Remove(patient);
         }
         localDoor.playerQueue.Add(patient);
         patient.NewDoor(localDoor);

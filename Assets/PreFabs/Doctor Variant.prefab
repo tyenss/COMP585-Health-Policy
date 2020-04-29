@@ -117,6 +117,7 @@ MonoBehaviour:
   bandaidPrice: 0
   stitchesPrice: 0
   inOffice: 0
+  officeCoord: {x: 0, y: 0, z: 0}
   money: 0
   doctorID: 0
 --- !u!1001 &1677978141446111269
@@ -149,7 +150,7 @@ PrefabInstance:
     - target: {fileID: 1680102507865915248, guid: 293becacabe7f42129530f34408cb6aa,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1680102507865915248, guid: 293becacabe7f42129530f34408cb6aa,
         type: 3}
@@ -169,8 +170,13 @@ PrefabInstance:
     - target: {fileID: 1680102507865915248, guid: 293becacabe7f42129530f34408cb6aa,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: UnityEngine.UI.Text, UnityEngine.UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1680102507865915248, guid: 293becacabe7f42129530f34408cb6aa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1782002968042270263}
     - target: {fileID: 4396545983876748443, guid: 293becacabe7f42129530f34408cb6aa,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -329,7 +335,7 @@ PrefabInstance:
     - target: {fileID: 7068231310523505445, guid: 293becacabe7f42129530f34408cb6aa,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7068231310523505445, guid: 293becacabe7f42129530f34408cb6aa,
         type: 3}
@@ -349,8 +355,13 @@ PrefabInstance:
     - target: {fileID: 7068231310523505445, guid: 293becacabe7f42129530f34408cb6aa,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: UnityEngine.UI.Text, UnityEngine.UI
       objectReference: {fileID: 0}
+    - target: {fileID: 7068231310523505445, guid: 293becacabe7f42129530f34408cb6aa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 4558132350452228266}
     - target: {fileID: 8154985852068144438, guid: 293becacabe7f42129530f34408cb6aa,
         type: 3}
       propertyPath: m_TagString
@@ -401,6 +412,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 077902a7cc04742028a633fb2f4becd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4558132350452228266 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2884798569342034063, guid: 293becacabe7f42129530f34408cb6aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1677978141446111269}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1782002968042270263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1149423377209749010, guid: 293becacabe7f42129530f34408cb6aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1677978141446111269}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &6156834116946877704

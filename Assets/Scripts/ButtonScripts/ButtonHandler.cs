@@ -70,26 +70,25 @@ public class ButtonHandler : MonoBehaviour
 
     
 
-    public void SetBandaidPrice()
+    public void SetBandaidPrice(Text text)
     {
         Doctor doctor = GameObject.Find("Local").GetComponent<Doctor>();
-        Text text = GameObject.Find("BandaidText").GetComponent<Text>();
+        //Text text = GameObject.Find("BandaidPrice").GetComponent<Text>();
         int price = System.Int32.Parse(text.text);
         if (price >= GlobalVariables.bandaidCost)
         {
-            doctor.bandaidPrice = price;
+            doctor.CmdSetBandaidPrice(price);
         }
-        Patient.EnableDisableButtons(false);
     }
 
-    public void SetStitchesPrice()
+    public void SetStitchesPrice(Text text)
     {
         Doctor doctor = GameObject.Find("Local").GetComponent<Doctor>();
-        Text text = GameObject.Find("StitchesText").GetComponent<Text>();
+        //Text text = GameObject.Find("StitchesText").GetComponent<Text>();
         int price = Int32.Parse(text.text);
         if (price >= GlobalVariables.stitchesCost)
         {
-            doctor.stitchesPrice = price;
+            doctor.CmdSetStitchesPrice(price);
         }
     }
 

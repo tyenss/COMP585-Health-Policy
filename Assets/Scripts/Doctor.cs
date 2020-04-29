@@ -87,24 +87,28 @@ public class Doctor : NetworkBehaviour
         return stitchesSold;
     }
 
-    public bool SetBandaidPrice(int price)
+    [Command]
+    public void CmdSetBandaidPrice(int price)
     {
-        if (price <= GlobalVariables.bandaidCost)
-        {
-            return false;
-        }
         bandaidPrice = price;
-        return true;
     }
 
-    public bool SetStitchesPrice(int price)
+    [ClientRpc]
+    public void RpcSetBandaidPrice(int price)
     {
-        if (price <= GlobalVariables.stitchesCost)
-        {
-            return false;
-        }
+        bandaidPrice = price;
+    }
+
+    [Command]
+    public void CmdSetStitchesPrice(int price)
+    {
         stitchesPrice = price;
-        return true;
+    }
+
+    [ClientRpc]
+    public void RpcSetStitchesPrice(int price)
+    {
+        stitchesPrice = price;
     }
 
     /// <summary>
