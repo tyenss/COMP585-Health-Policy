@@ -93,13 +93,9 @@ public class ButtonHandler : MonoBehaviour
         int price = System.Int32.Parse(text.text);
         if (price >= GlobalVariables.bandaidCost)
         {
-            
             doctor.CmdSetBandaidPrice(price);
-            whiteboard.changeBandaidPrice();
-            whiteboard1.changeBandaidPrice();
-
-
-
+            whiteboard.bandaid.text = price.ToString();
+            whiteboard1.bandaid.text = price.ToString();
         }
     }
 
@@ -113,8 +109,8 @@ public class ButtonHandler : MonoBehaviour
         if (price >= GlobalVariables.stitchesCost)
         {
             doctor.CmdSetStitchesPrice(price);
-            whiteboard.changeStitchPrice();
-            whiteboard1.changeStitchPrice();
+            whiteboard.stitches.text = price.ToString();
+            whiteboard1.stitches.text = price.ToString();
         }
     }
 

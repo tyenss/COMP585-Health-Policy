@@ -153,6 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0374e1e6cb2a96d48a89104c606b2f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   whiteboardID: 9
   bandaid: {fileID: 287015595}
   stitches: {fileID: 580652130}
@@ -271,6 +273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0374e1e6cb2a96d48a89104c606b2f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   whiteboardID: 5
   bandaid: {fileID: 2065134770}
   stitches: {fileID: 1087401481}
@@ -414,6 +418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0374e1e6cb2a96d48a89104c606b2f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   whiteboardID: 3
   bandaid: {fileID: 2011835310}
   stitches: {fileID: 588386535}
@@ -996,6 +1002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0374e1e6cb2a96d48a89104c606b2f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   whiteboardID: 6
   bandaid: {fileID: 812717878}
   stitches: {fileID: 1946751330}
@@ -1355,6 +1363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0374e1e6cb2a96d48a89104c606b2f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   whiteboardID: 4
   bandaid: {fileID: 360005866}
   stitches: {fileID: 1199521384}
@@ -1623,7 +1633,7 @@ PrefabInstance:
     - target: {fileID: 4962907174404404098, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.21
       objectReference: {fileID: 0}
     - target: {fileID: 4962907175208003016, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
         type: 3}
@@ -2147,7 +2157,7 @@ PrefabInstance:
     - target: {fileID: 4962907174404404098, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.09
       objectReference: {fileID: 0}
     - target: {fileID: 4962907175208003016, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
         type: 3}
@@ -2543,6 +2553,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0374e1e6cb2a96d48a89104c606b2f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   whiteboardID: 12
   bandaid: {fileID: 1176034637}
   stitches: {fileID: 868049831}
@@ -3091,6 +3103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0374e1e6cb2a96d48a89104c606b2f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   whiteboardID: 2
   bandaid: {fileID: 1133191671}
   stitches: {fileID: 1785123806}
@@ -3396,7 +3410,7 @@ PrefabInstance:
     - target: {fileID: 4962907174404404098, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -8.47
       objectReference: {fileID: 0}
     - target: {fileID: 4962907175208003016, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
         type: 3}
@@ -3700,6 +3714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0374e1e6cb2a96d48a89104c606b2f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   whiteboardID: 11
   bandaid: {fileID: 1334726366}
   stitches: {fileID: 1565761691}
@@ -3818,6 +3834,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0374e1e6cb2a96d48a89104c606b2f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   whiteboardID: 8
   bandaid: {fileID: 1029039647}
   stitches: {fileID: 1856508209}
@@ -4249,6 +4267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0374e1e6cb2a96d48a89104c606b2f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   whiteboardID: 7
   bandaid: {fileID: 1370589123}
   stitches: {fileID: 1466778081}
@@ -4855,6 +4875,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0374e1e6cb2a96d48a89104c606b2f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   whiteboardID: 10
   bandaid: {fileID: 190677515}
   stitches: {fileID: 472165323}
@@ -5496,6 +5518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0374e1e6cb2a96d48a89104c606b2f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   whiteboardID: 1
   bandaid: {fileID: 712364339}
   stitches: {fileID: 1631230465}
@@ -5527,6 +5551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0374e1e6cb2a96d48a89104c606b2f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   whiteboardID: 1
   bandaid: {fileID: 712364339}
   stitches: {fileID: 1631230465}
@@ -6553,7 +6579,7 @@ PrefabInstance:
     - target: {fileID: 4962907174404404098, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: 4962907175208003016, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
         type: 3}
@@ -6752,7 +6778,7 @@ PrefabInstance:
     - target: {fileID: 4962907174404404098, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.93
       objectReference: {fileID: 0}
     - target: {fileID: 4962907175208003016, guid: e5bcc061f73bf41ff8ad12a6ccaf9107,
         type: 3}

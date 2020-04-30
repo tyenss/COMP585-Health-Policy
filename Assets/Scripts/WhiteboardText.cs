@@ -4,9 +4,10 @@ using UnityEngine;
 using System.Linq;
 using System;
 using UnityEngine.UI;
+using Mirror;
 
 [System.Serializable] 
-public class WhiteboardText : MonoBehaviour
+public class WhiteboardText : NetworkBehaviour
 {
     public int whiteboardID;
     public Text bandaid;
@@ -27,12 +28,10 @@ public class WhiteboardText : MonoBehaviour
 
     }
 
-    public void changeBandaidPrice()
+    [Command]
+    public void CmdChangeBandaidPrice()
     {
         Doctor doctor;
-
-
-
 
         if (whiteboardID > 6)
         {
@@ -43,12 +42,19 @@ public class WhiteboardText : MonoBehaviour
             doctor = FindObjectsOfType<Doctor>().First(x => x.doctorID == whiteboardID);
         }
         bandaid.text = doctor.bandaidPrice.ToString();
-
-   
-
+        RpcChangeBandaidPrice(doctor.bandaidPrice);
     }
-    public void changeStitchPrice() { 
-         Doctor doctor;
+
+    [ClientRpc]
+    public void RpcChangeBandaidPrice(int price)
+    {
+        bandaid.text = price.ToString();
+    }
+
+    
+    public void ChangeStitchPrice() 
+    { 
+        Doctor doctor;
 
         if (whiteboardID > 6)
         {
@@ -59,7 +65,6 @@ public class WhiteboardText : MonoBehaviour
             doctor = FindObjectsOfType<Doctor>().First(x => x.doctorID == whiteboardID);
         }
         stitches.text = doctor.stitchesPrice.ToString();
-
     }
 
 

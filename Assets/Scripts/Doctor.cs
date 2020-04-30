@@ -93,26 +93,21 @@ public class Doctor : NetworkBehaviour
     public void CmdSetBandaidPrice(int price)
     {
         bandaidPrice = price;
-    }
-
-    [ClientRpc]
-    public void RpcSetBandaidPrice(int price)
-    {
-        bandaidPrice = price;
+        WhiteboardText whiteboard = FindObjectsOfType<WhiteboardText>().First(x => x.whiteboardID == doctorID);
+        WhiteboardText whiteboard1 = FindObjectsOfType<WhiteboardText>().First(x => x.whiteboardID == doctorID + 6);
+        whiteboard.bandaid.text = price.ToString();
+        whiteboard1.bandaid.text = price.ToString();
     }
 
     [Command]
     public void CmdSetStitchesPrice(int price)
     {
         stitchesPrice = price;
+        WhiteboardText whiteboard = FindObjectsOfType<WhiteboardText>().First(x => x.whiteboardID == doctorID);
+        WhiteboardText whiteboard1 = FindObjectsOfType<WhiteboardText>().First(x => x.whiteboardID == doctorID + 6);
+        whiteboard.stitches.text = price.ToString();
+        whiteboard1.stitches.text = price.ToString();
     }
-
-    [ClientRpc]
-    public void RpcSetStitchesPrice(int price)
-    {
-        stitchesPrice = price;
-    }
-
     /// <summary>
 	/// Switch rooms between lobby and office
 	/// </summary>
