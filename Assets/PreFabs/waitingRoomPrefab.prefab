@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 1225457183884124118}
   - component: {fileID: 4814896047200959214}
   - component: {fileID: 6328620117332345076}
+  - component: {fileID: 2484410225719500562}
   m_Layer: 0
   m_Name: LobbyFloor (14)
   m_TagString: Untagged
@@ -440,6 +441,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2484410225719500562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635064029250360880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &875422235061348247
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,6 +747,7 @@ GameObject:
   - component: {fileID: 9047185353341370955}
   - component: {fileID: 728091224813527259}
   - component: {fileID: 1039241602106060519}
+  - component: {fileID: 244266441461436970}
   m_Layer: 0
   m_Name: LobbyFloor (11)
   m_TagString: Untagged
@@ -816,6 +830,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &244266441461436970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501758647914374442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1653792482287449274
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +854,7 @@ GameObject:
   - component: {fileID: 7169160657610281171}
   - component: {fileID: 7367621731599852368}
   - component: {fileID: 8919771541169300695}
+  - component: {fileID: 7535222888212543473}
   m_Layer: 0
   m_Name: LobbyFloor (13)
   m_TagString: Untagged
@@ -910,6 +937,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7535222888212543473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653792482287449274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2027202872187377641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,6 +1059,7 @@ GameObject:
   - component: {fileID: 4093377195839549527}
   - component: {fileID: 6698544970043346875}
   - component: {fileID: 2823117501661861651}
+  - component: {fileID: 6412412181844924337}
   m_Layer: 0
   m_Name: LobbyFloor (18)
   m_TagString: Untagged
@@ -1102,6 +1142,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &6412412181844924337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2328940897282327298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2338188048165034520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,6 +1166,7 @@ GameObject:
   - component: {fileID: 6368520632065046219}
   - component: {fileID: 5912870670108293595}
   - component: {fileID: 2497975406026039317}
+  - component: {fileID: 3326247766608881520}
   m_Layer: 0
   m_Name: LobbyFloor (4)
   m_TagString: Untagged
@@ -1196,6 +1249,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &3326247766608881520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2338188048165034520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2703471370394446273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1322,7 @@ GameObject:
   - component: {fileID: 4328468451040014457}
   - component: {fileID: 8679371170419078231}
   - component: {fileID: 3189438780302523941}
+  - component: {fileID: 4232300322314154567}
   m_Layer: 0
   m_Name: LobbyFloor (6)
   m_TagString: Untagged
@@ -1339,6 +1405,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &4232300322314154567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2789144440447580533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2884773425721075671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,6 +1429,7 @@ GameObject:
   - component: {fileID: 675025403597642532}
   - component: {fileID: 7444021294235310646}
   - component: {fileID: 4003974740193411170}
+  - component: {fileID: 3900368039278318075}
   m_Layer: 0
   m_Name: LobbyFloor (16)
   m_TagString: Untagged
@@ -1433,6 +1512,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &3900368039278318075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2884773425721075671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2908290640962658069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,6 +1536,7 @@ GameObject:
   - component: {fileID: 6079400716767868820}
   - component: {fileID: 6978711433823411997}
   - component: {fileID: 2669863232680643028}
+  - component: {fileID: 8180626898361659698}
   m_Layer: 0
   m_Name: LobbyFloor (57)
   m_TagString: Untagged
@@ -1527,6 +1619,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &8180626898361659698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2908290640962658069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2950185531065218344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1643,7 @@ GameObject:
   - component: {fileID: 3085671017836542966}
   - component: {fileID: 4752706029150898051}
   - component: {fileID: 7134348699068827914}
+  - component: {fileID: 2254053698058694578}
   m_Layer: 0
   m_Name: LobbyFloor (83)
   m_TagString: Untagged
@@ -1621,6 +1726,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2254053698058694578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2950185531065218344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2971021246051923906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,6 +1750,7 @@ GameObject:
   - component: {fileID: 6766845350050282406}
   - component: {fileID: 8190553166988100848}
   - component: {fileID: 6375164538974519293}
+  - component: {fileID: 6435380111688515059}
   m_Layer: 0
   m_Name: LobbyFloor (7)
   m_TagString: Untagged
@@ -1715,6 +1833,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &6435380111688515059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971021246051923906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3060962281971962495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,6 +1857,7 @@ GameObject:
   - component: {fileID: 5959507619555049881}
   - component: {fileID: 363265869071064057}
   - component: {fileID: 7827384241298566331}
+  - component: {fileID: 1858188591537505344}
   m_Layer: 0
   m_Name: LobbyFloor (54)
   m_TagString: Untagged
@@ -1809,6 +1940,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1858188591537505344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3060962281971962495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3140728207853339000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,6 +1964,7 @@ GameObject:
   - component: {fileID: 3199354928091582126}
   - component: {fileID: 5371066768446550859}
   - component: {fileID: 5868914246841632983}
+  - component: {fileID: 7247865376046825561}
   m_Layer: 0
   m_Name: LobbyFloor (19)
   m_TagString: Untagged
@@ -1903,6 +2047,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7247865376046825561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3140728207853339000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3148803458676129912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,6 +2071,7 @@ GameObject:
   - component: {fileID: 5349490324674610788}
   - component: {fileID: 6857299521168714768}
   - component: {fileID: 2162241638441409362}
+  - component: {fileID: 3531332273273979190}
   m_Layer: 0
   m_Name: LobbyFloor (9)
   m_TagString: Untagged
@@ -1997,6 +2154,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &3531332273273979190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3148803458676129912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3152435237483363645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,6 +2178,7 @@ GameObject:
   - component: {fileID: 1653665228465626997}
   - component: {fileID: 551107525276471012}
   - component: {fileID: 6101250925200761587}
+  - component: {fileID: 7936104464566534439}
   m_Layer: 0
   m_Name: LobbyFloor (53)
   m_TagString: Untagged
@@ -2091,6 +2261,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7936104464566534439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3152435237483363645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3542146364983576985
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,6 +2285,7 @@ GameObject:
   - component: {fileID: 8046858413003929146}
   - component: {fileID: 3338837536817533880}
   - component: {fileID: 5685099841372381295}
+  - component: {fileID: 1213099059446117334}
   m_Layer: 0
   m_Name: LobbyFloor (51)
   m_TagString: Untagged
@@ -2185,6 +2368,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1213099059446117334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542146364983576985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3567456239437843762
 GameObject:
   m_ObjectHideFlags: 0
@@ -2291,6 +2486,7 @@ GameObject:
   - component: {fileID: 8214921871491085936}
   - component: {fileID: 3738811060343550024}
   - component: {fileID: 6265114506833688427}
+  - component: {fileID: 5974442080047500650}
   m_Layer: 0
   m_Name: LobbyFloor (12)
   m_TagString: Untagged
@@ -2373,6 +2569,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5974442080047500650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3733165232416032629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3828340723818232923
 GameObject:
   m_ObjectHideFlags: 0
@@ -2385,6 +2593,7 @@ GameObject:
   - component: {fileID: 8548719402575767467}
   - component: {fileID: 6073571284704277118}
   - component: {fileID: 1277616570155980259}
+  - component: {fileID: 6932934209314044643}
   m_Layer: 0
   m_Name: LobbyFloor (25)
   m_TagString: Untagged
@@ -2467,6 +2676,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &6932934209314044643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3828340723818232923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3838627026317585812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,6 +3103,7 @@ MonoBehaviour:
   coordsToPlace: {x: 0, y: 0}
   officeCoords: {x: 0, y: 0}
   doorID: 0
+  playerQueue: []
 --- !u!114 &5787451949116551743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2909,6 +3131,7 @@ GameObject:
   - component: {fileID: 1882716860943792214}
   - component: {fileID: 984397966105200029}
   - component: {fileID: 1397731771802485846}
+  - component: {fileID: 7235503720407074864}
   m_Layer: 0
   m_Name: LobbyFloor (75)
   m_TagString: Untagged
@@ -2991,6 +3214,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7235503720407074864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4096578537554140204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4197512349532393074
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,6 +3317,7 @@ GameObject:
   - component: {fileID: 8243913218147300489}
   - component: {fileID: 118100036501237384}
   - component: {fileID: 3701658711797588322}
+  - component: {fileID: 900133603447252105}
   m_Layer: 0
   m_Name: LobbyFloor (47)
   m_TagString: Untagged
@@ -3164,6 +3400,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &900133603447252105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4209948457045560396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4221348128206877929
 GameObject:
   m_ObjectHideFlags: 0
@@ -3176,6 +3424,7 @@ GameObject:
   - component: {fileID: 9118759183533233326}
   - component: {fileID: 3823970038903946537}
   - component: {fileID: 7219833252501473563}
+  - component: {fileID: 9080965998021460466}
   m_Layer: 0
   m_Name: LobbyFloor (3)
   m_TagString: Untagged
@@ -3258,6 +3507,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &9080965998021460466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4221348128206877929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4299205190725040232
 GameObject:
   m_ObjectHideFlags: 0
@@ -3366,6 +3627,7 @@ GameObject:
   - component: {fileID: 3282872376436855627}
   - component: {fileID: 3323934020088094287}
   - component: {fileID: 697452769698738092}
+  - component: {fileID: 7303539348393060125}
   m_Layer: 0
   m_Name: LobbyFloor (44)
   m_TagString: Untagged
@@ -3448,6 +3710,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7303539348393060125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4572518478873518539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4774566668528190445
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,6 +3828,7 @@ GameObject:
   - component: {fileID: 2710574715828955791}
   - component: {fileID: 8173821998396055353}
   - component: {fileID: 3879405531562805601}
+  - component: {fileID: 5629802518988763756}
   m_Layer: 0
   m_Name: LobbyFloor (81)
   m_TagString: Untagged
@@ -3636,6 +3911,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5629802518988763756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4850973183400516153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4924018631226746875
 GameObject:
   m_ObjectHideFlags: 0
@@ -3648,6 +3935,7 @@ GameObject:
   - component: {fileID: 9213048549802697192}
   - component: {fileID: 4569969295870319154}
   - component: {fileID: 550117922803924459}
+  - component: {fileID: 7677696750516301845}
   m_Layer: 0
   m_Name: LobbyFloor (58)
   m_TagString: Untagged
@@ -3730,6 +4018,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7677696750516301845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4924018631226746875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4958418642044726007
 GameObject:
   m_ObjectHideFlags: 0
@@ -3825,6 +4125,7 @@ GameObject:
   - component: {fileID: 3086981935306454180}
   - component: {fileID: 6109552662072994394}
   - component: {fileID: 3201565212833380260}
+  - component: {fileID: 8712187492710705915}
   m_Layer: 0
   m_Name: LobbyFloor (20)
   m_TagString: Untagged
@@ -3907,6 +4208,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &8712187492710705915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4985886376554455457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5045834916514878752
 GameObject:
   m_ObjectHideFlags: 0
@@ -3998,6 +4311,7 @@ GameObject:
   - component: {fileID: 2982703927657726539}
   - component: {fileID: 1537702842863491505}
   - component: {fileID: 3071327320786367790}
+  - component: {fileID: 5545486920609956075}
   m_Layer: 0
   m_Name: LobbyFloor (24)
   m_TagString: Untagged
@@ -4080,6 +4394,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5545486920609956075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5105745511483459226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5296083344570001078
 GameObject:
   m_ObjectHideFlags: 0
@@ -4092,6 +4418,7 @@ GameObject:
   - component: {fileID: 4176007451757799864}
   - component: {fileID: 7756661964338518049}
   - component: {fileID: 6595497441355923099}
+  - component: {fileID: 8262335874627512275}
   m_Layer: 0
   m_Name: LobbyFloor
   m_TagString: Untagged
@@ -4174,6 +4501,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &8262335874627512275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5296083344570001078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5307019653492610211
 GameObject:
   m_ObjectHideFlags: 0
@@ -4186,6 +4525,7 @@ GameObject:
   - component: {fileID: 1145828272927446381}
   - component: {fileID: 4864315262392887449}
   - component: {fileID: 4884954607750018748}
+  - component: {fileID: 886335759494378073}
   m_Layer: 0
   m_Name: LobbyFloor (21)
   m_TagString: Untagged
@@ -4268,6 +4608,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &886335759494378073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5307019653492610211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5413585153522452317
 GameObject:
   m_ObjectHideFlags: 0
@@ -4374,6 +4726,7 @@ GameObject:
   - component: {fileID: 8414491118060777614}
   - component: {fileID: 2595331803979272853}
   - component: {fileID: 3228340083924414052}
+  - component: {fileID: 2297425967725984069}
   m_Layer: 0
   m_Name: LobbyFloor (52)
   m_TagString: Untagged
@@ -4456,6 +4809,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2297425967725984069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5480259904458580850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5683533494479173726
 GameObject:
   m_ObjectHideFlags: 0
@@ -4468,6 +4833,7 @@ GameObject:
   - component: {fileID: 8987955636491304966}
   - component: {fileID: 93804246173877445}
   - component: {fileID: 2455646158284966303}
+  - component: {fileID: 921335295186308476}
   m_Layer: 0
   m_Name: LobbyFloor (84)
   m_TagString: Untagged
@@ -4550,6 +4916,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &921335295186308476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683533494479173726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5883901929271631557
 GameObject:
   m_ObjectHideFlags: 0
@@ -4697,6 +5075,7 @@ GameObject:
   - component: {fileID: 8392015570064557083}
   - component: {fileID: 8840771802675990045}
   - component: {fileID: 8184780548347339454}
+  - component: {fileID: 7817672273879619824}
   m_Layer: 0
   m_Name: LobbyFloor (80)
   m_TagString: Untagged
@@ -4779,6 +5158,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7817672273879619824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5961572869266933911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6175188259283502871
 GameObject:
   m_ObjectHideFlags: 0
@@ -4791,6 +5182,7 @@ GameObject:
   - component: {fileID: 1914876519297177462}
   - component: {fileID: 9056045466499815084}
   - component: {fileID: 7927437410798295683}
+  - component: {fileID: 5529339514309219752}
   m_Layer: 0
   m_Name: LobbyFloor (23)
   m_TagString: Untagged
@@ -4873,6 +5265,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5529339514309219752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6175188259283502871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6208412017288007849
 GameObject:
   m_ObjectHideFlags: 0
@@ -5073,6 +5477,7 @@ GameObject:
   - component: {fileID: 4343804646985256072}
   - component: {fileID: 3968560540785533112}
   - component: {fileID: 7623260602440812957}
+  - component: {fileID: 4015060472713501587}
   m_Layer: 0
   m_Name: LobbyFloor (55)
   m_TagString: Untagged
@@ -5155,6 +5560,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &4015060472713501587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264297896416659016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6302105392327712254
 GameObject:
   m_ObjectHideFlags: 0
@@ -5261,6 +5678,7 @@ GameObject:
   - component: {fileID: 2342791443868810699}
   - component: {fileID: 5791818057406502052}
   - component: {fileID: 104303876377562002}
+  - component: {fileID: 1973496262970719812}
   m_Layer: 0
   m_Name: LobbyFloor (72)
   m_TagString: Untagged
@@ -5343,6 +5761,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1973496262970719812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6464514314944723839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6544774019444764256
 GameObject:
   m_ObjectHideFlags: 0
@@ -5355,6 +5785,7 @@ GameObject:
   - component: {fileID: 2601519252598415351}
   - component: {fileID: 8789188047271898842}
   - component: {fileID: 5382381252811422205}
+  - component: {fileID: 5687402869666945336}
   m_Layer: 0
   m_Name: LobbyFloor (1)
   m_TagString: Untagged
@@ -5437,6 +5868,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5687402869666945336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6544774019444764256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6750700439249919630
 GameObject:
   m_ObjectHideFlags: 0
@@ -5498,6 +5941,7 @@ GameObject:
   - component: {fileID: 239014420569163015}
   - component: {fileID: 3742642098241828930}
   - component: {fileID: 4164109545066416402}
+  - component: {fileID: 2309990888269620432}
   m_Layer: 0
   m_Name: LobbyFloor (82)
   m_TagString: Untagged
@@ -5580,6 +6024,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2309990888269620432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6946058046243361695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6947735950362683117
 GameObject:
   m_ObjectHideFlags: 0
@@ -5592,6 +6048,7 @@ GameObject:
   - component: {fileID: 6734394178688887262}
   - component: {fileID: 712039098210502346}
   - component: {fileID: 9005681647090312870}
+  - component: {fileID: 5705316915055653000}
   m_Layer: 0
   m_Name: LobbyFloor (45)
   m_TagString: Untagged
@@ -5674,6 +6131,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5705316915055653000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6947735950362683117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6974991578918206435
 GameObject:
   m_ObjectHideFlags: 0
@@ -5686,6 +6155,7 @@ GameObject:
   - component: {fileID: 598118255110413867}
   - component: {fileID: 4023294402363860541}
   - component: {fileID: 2350607738372186742}
+  - component: {fileID: 9094182388491860465}
   m_Layer: 0
   m_Name: LobbyFloor (56)
   m_TagString: Untagged
@@ -5768,6 +6238,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &9094182388491860465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6974991578918206435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7016213316376834427
 GameObject:
   m_ObjectHideFlags: 0
@@ -5859,6 +6341,7 @@ GameObject:
   - component: {fileID: 4242329159322877375}
   - component: {fileID: 6249811756474662673}
   - component: {fileID: 4440381167191879788}
+  - component: {fileID: 3088566536978390936}
   m_Layer: 0
   m_Name: LobbyFloor (50)
   m_TagString: Untagged
@@ -5941,6 +6424,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &3088566536978390936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7049917118444464609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7050142000078927622
 GameObject:
   m_ObjectHideFlags: 0
@@ -6032,6 +6527,7 @@ GameObject:
   - component: {fileID: 3816043326817119156}
   - component: {fileID: 8797279824683646967}
   - component: {fileID: 7307120702356569602}
+  - component: {fileID: 8099924038359342365}
   m_Layer: 0
   m_Name: LobbyFloor (8)
   m_TagString: Untagged
@@ -6114,6 +6610,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &8099924038359342365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7373093328516389543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7586487290945198064
 GameObject:
   m_ObjectHideFlags: 0
@@ -6126,6 +6634,7 @@ GameObject:
   - component: {fileID: 9213985353965739136}
   - component: {fileID: 5954888503420629965}
   - component: {fileID: 2995765911901217559}
+  - component: {fileID: 1044990539509815879}
   m_Layer: 0
   m_Name: LobbyFloor (48)
   m_TagString: Untagged
@@ -6208,6 +6717,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1044990539509815879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7586487290945198064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7619523012333462868
 GameObject:
   m_ObjectHideFlags: 0
@@ -6220,6 +6741,7 @@ GameObject:
   - component: {fileID: 8623503920500685508}
   - component: {fileID: 2151062069357677297}
   - component: {fileID: 3811537023093942136}
+  - component: {fileID: 7216448608967192595}
   m_Layer: 0
   m_Name: LobbyFloor (17)
   m_TagString: Untagged
@@ -6302,6 +6824,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7216448608967192595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7619523012333462868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7758003888533560391
 GameObject:
   m_ObjectHideFlags: 0
@@ -6314,6 +6848,7 @@ GameObject:
   - component: {fileID: 2359940994917636079}
   - component: {fileID: 8227318533769342919}
   - component: {fileID: 7070907513707517615}
+  - component: {fileID: 3070594683943607641}
   m_Layer: 0
   m_Name: LobbyFloor (46)
   m_TagString: Untagged
@@ -6396,6 +6931,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &3070594683943607641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7758003888533560391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7823222817712695134
 GameObject:
   m_ObjectHideFlags: 0
@@ -6408,6 +6955,7 @@ GameObject:
   - component: {fileID: 967527864247655315}
   - component: {fileID: 8714639208238700669}
   - component: {fileID: 8611759844758362643}
+  - component: {fileID: 8726545946422548221}
   m_Layer: 0
   m_Name: LobbyFloor (71)
   m_TagString: Untagged
@@ -6490,6 +7038,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &8726545946422548221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7823222817712695134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7956409400380918896
 GameObject:
   m_ObjectHideFlags: 0
@@ -6502,6 +7062,7 @@ GameObject:
   - component: {fileID: 1783925442490921689}
   - component: {fileID: 5314287907101325510}
   - component: {fileID: 7966724018075381626}
+  - component: {fileID: 4352217672091188031}
   m_Layer: 0
   m_Name: LobbyFloor (74)
   m_TagString: Untagged
@@ -6584,6 +7145,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &4352217672091188031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7956409400380918896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7996061635131853440
 GameObject:
   m_ObjectHideFlags: 0
@@ -6626,6 +7199,7 @@ GameObject:
   - component: {fileID: 6384041493443212990}
   - component: {fileID: 2890702234283857737}
   - component: {fileID: 5526182159134474955}
+  - component: {fileID: 8668331979237409464}
   m_Layer: 0
   m_Name: LobbyFloor (22)
   m_TagString: Untagged
@@ -6708,6 +7282,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &8668331979237409464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8120228295032411984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8162813656162882660
 GameObject:
   m_ObjectHideFlags: 0
@@ -6814,6 +7400,7 @@ GameObject:
   - component: {fileID: 5262681298438826065}
   - component: {fileID: 2597571036738077628}
   - component: {fileID: 7240799540796033839}
+  - component: {fileID: 1039053087382991343}
   m_Layer: 0
   m_Name: LobbyFloor (49)
   m_TagString: Untagged
@@ -6896,6 +7483,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1039053087382991343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8345822001223662216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8472817662951355549
 GameObject:
   m_ObjectHideFlags: 0
@@ -7100,6 +7699,7 @@ GameObject:
   - component: {fileID: 1805200303509445330}
   - component: {fileID: 4960646365313230916}
   - component: {fileID: 6903381055668707423}
+  - component: {fileID: 648792636872131924}
   m_Layer: 0
   m_Name: LobbyFloor (73)
   m_TagString: Untagged
@@ -7182,6 +7782,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &648792636872131924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8738526830378736930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8764973609065994777
 GameObject:
   m_ObjectHideFlags: 0
@@ -7254,6 +7866,7 @@ GameObject:
   - component: {fileID: 836800580413610861}
   - component: {fileID: 5606408799496494497}
   - component: {fileID: 3684338681550171192}
+  - component: {fileID: 6438091086522686443}
   m_Layer: 0
   m_Name: LobbyFloor (15)
   m_TagString: Untagged
@@ -7336,6 +7949,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &6438091086522686443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8847336060183048000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8967527581718895830
 GameObject:
   m_ObjectHideFlags: 0
@@ -7442,6 +8067,7 @@ GameObject:
   - component: {fileID: 8645060026557649649}
   - component: {fileID: 4032289899636633737}
   - component: {fileID: 548032435740162240}
+  - component: {fileID: 3932543597491421460}
   m_Layer: 0
   m_Name: LobbyFloor (2)
   m_TagString: Untagged
@@ -7524,6 +8150,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &3932543597491421460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9118386175698541415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9118447301326478512
 GameObject:
   m_ObjectHideFlags: 0
@@ -7536,6 +8174,7 @@ GameObject:
   - component: {fileID: 1472147013252864329}
   - component: {fileID: 5761218388216261666}
   - component: {fileID: 7742217129130041795}
+  - component: {fileID: 5796293595615416041}
   m_Layer: 0
   m_Name: LobbyFloor (10)
   m_TagString: Untagged
@@ -7618,6 +8257,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5796293595615416041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9118447301326478512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9135565270779159924
 GameObject:
   m_ObjectHideFlags: 0
@@ -7630,6 +8281,7 @@ GameObject:
   - component: {fileID: 9217979894992247084}
   - component: {fileID: 1163116898226954635}
   - component: {fileID: 1610287961606349376}
+  - component: {fileID: 1125970739266798921}
   m_Layer: 0
   m_Name: LobbyFloor (5)
   m_TagString: Untagged
@@ -7712,3 +8364,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1125970739266798921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135565270779159924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9a15530ef361045bcd527a0f7b9c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

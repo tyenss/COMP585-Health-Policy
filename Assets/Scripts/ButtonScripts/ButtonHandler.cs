@@ -47,6 +47,19 @@ public class ButtonHandler : MonoBehaviour
         }
     }
 
+    public void BuyNone()
+    {
+        Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.hasAuthority);
+        if (patient.cure == Patient.Cure.None)
+        {
+            patient.cure = Patient.Cure.NoTreatment;
+            patient.roomID = 0;
+            patient.transform.position = new Vector3(0f, 0f, 0f);
+            patient.cured.text = "Treated: Declined";
+        }
+
+    }
+
     public void EnterRoom()
     {
         //Patient patient = GameObject.Find("Local").GetComponent<Patient>();

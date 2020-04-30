@@ -13,7 +13,7 @@ public class Patient : NetworkBehaviour
     public GameObject canvas;
     public int roomID; //Door ID is used to determine what room patient is in
                        //If roomID = 0, else they are in office
-    public enum Cure { None, Bandaid, Stitches };
+    public enum Cure { None, Bandaid, Stitches, NoTreatment};
     public Cure cure;
     public int money;
     public int patientID;
@@ -224,5 +224,39 @@ public class Patient : NetworkBehaviour
     public void RpcMovePatient(Vector3 patientCoords)
     {
         transform.position = patientCoords;
+    }
+
+    [Command]
+    public void CmdBuyBandaid()
+    {
+        cure = Patient.Cure.Bandaid;
+        roomID = 0;
+        transform.position = new Vector3(0f, 0f, 0f);
+        RpcBuyBandaid();
+    }
+
+    [ClientRpc]
+    public void RpcBuyBandaid()
+    {
+        cure = Patient.Cure.Bandaid;
+        roomID = 0;
+        transform.position = new Vector3(0f, 0f, 0f);
+    }
+
+    [Command]
+    public void CmdBuyStitches()
+    {
+        cure = Patient.Cure.Stitches;
+        roomID = 0;
+        transform.position = new Vector3(0f, 0f, 0f);
+        RpcBuyStitches();
+    }
+
+    [ClientRpc]
+    public void RpcBuyStitches()
+    {
+        cure = Patient.Cure.Stitches;
+        roomID = 0;
+        transform.position = new Vector3(0f, 0f, 0f);
     }
 }
