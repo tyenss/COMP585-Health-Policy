@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 
 //using Unity.
@@ -31,5 +32,11 @@ public class GlobalVariables : MonoBehaviour
         buttons = new List<GameObject>();
     }
 
-
+    public void Update()
+    {
+        if (patientList.Any() && patientList.All(x => x.cure != Patient.Cure.None))
+        {
+            Time.timeScale = 0;
+        }
+    }
 }
