@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using System;
+using UnityEngine.Networking;
+using Mirror;
 
 public class ButtonHandler : MonoBehaviour
 {
@@ -49,14 +51,9 @@ public class ButtonHandler : MonoBehaviour
 
     public void EnterRoom()
     {
-        //Patient patient = GameObject.Find("Local").GetComponent<Patient>();
-        Patient patient = GameObject.FindObjectsOfType<Patient>().First(x => x.hasAuthority);
-        Door door = patient.GetDoor();
-        if (door != null)
-        {
-            patient.roomID = door.doorID;
-            patient.CmdPopQueue(door.doorID);
-        }
+        Patient patient = GameObject.Find("Local").GetComponent<Patient>();
+        patient.RpcEnterRoom();
+        patient.CmdEnterRoom();
     }
 
     public void LeaveRoom()

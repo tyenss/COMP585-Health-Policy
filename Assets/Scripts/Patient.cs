@@ -18,12 +18,13 @@ public class Patient : NetworkBehaviour
     public int money;
     public int patientID;
     public string patientName;
-
     private Door door; //door that the player is in queue, null if not
 
     public Text health;
     public Text cured;
     public Text moneyText;
+
+    public GameObject enterButton;
 
     //public localPlayer;
 
@@ -36,17 +37,20 @@ public class Patient : NetworkBehaviour
         {
             PlayerCamera.SetActive(true);
             CmdAddPatientToList(this.netId);
-            canvas.SetActive(true);
+           // canvas.SetActive(true);
+            GetComponentInChildren<Canvas>().enabled = true;
+            GameObject.Find("EnterDoor").GetComponent<Button>().onClick.AddListener(() => CmdEnterRoom());
 
         }
         else
         {
             PlayerCamera.SetActive(false);
-            canvas.SetActive(false);
+            //canvas.SetActive(false);
         }
         door = null;
         cure = Cure.None;
         patientID = GlobalVariables.patientList.Count;
+        gameObject.name = "Local";
         health.text = String.Concat("Health: :",GetRandomHealth().ToString());
         EnableDisableButtons(false);
     }
@@ -225,4 +229,29 @@ public class Patient : NetworkBehaviour
     {
         transform.position = patientCoords;
     }
+    public void RpcEnterRoom()
+    {
+        Patient patient = GameObject.Find("Local").GetComponent<Patient>();
+        Door door = patient.GetDoor();
+        if (door != null)
+        {
+            roomID = door.doorID;
+            CmdPopQueue(door.doorID);
+        }
+    }
+
+    public void CmdEnterRoom()
+    {
+        Patient patient = GameObject.Find("Local").GetComponent<Patient>();
+        Door door = patient.GetDoor();
+        if (door != null)
+        {
+            roomID = door.doorID;
+            CmdPopQueue(door.doorID);
+        }
+    }
+
 }
+
+
+
