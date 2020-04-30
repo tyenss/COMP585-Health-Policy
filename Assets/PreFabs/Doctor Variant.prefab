@@ -114,8 +114,8 @@ MonoBehaviour:
   syncInterval: 0.1
   PlayerCamera: {fileID: 2265081131368877128}
   canvas: {fileID: 5041460139289638434}
-  bandaidPrice: 0
-  stitchesPrice: 0
+  bandaidPrice: 500
+  stitchesPrice: 700
   inOffice: 0
   officeCoord: {x: 0, y: 0, z: 0}
   money: 0
@@ -285,7 +285,7 @@ PrefabInstance:
     - target: {fileID: 4502624049715243390, guid: 293becacabe7f42129530f34408cb6aa,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 200
+      value: 177
       objectReference: {fileID: 0}
     - target: {fileID: 4502624049715243390, guid: 293becacabe7f42129530f34408cb6aa,
         type: 3}
