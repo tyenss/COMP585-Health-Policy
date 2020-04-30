@@ -73,11 +73,14 @@ public class ButtonHandler : MonoBehaviour
     public void SetBandaidPrice(Text text)
     {
         Doctor doctor = GameObject.Find("Local").GetComponent<Doctor>();
+        Door WhiteboardText = FindObjectsOfType<Door>().First(x => x.doorID == doctor.doctorID);
+
         //Text text = GameObject.Find("BandaidPrice").GetComponent<Text>();
         int price = System.Int32.Parse(text.text);
         if (price >= GlobalVariables.bandaidCost)
         {
             doctor.CmdSetBandaidPrice(price);
+            
         }
     }
 
@@ -97,7 +100,7 @@ public class ButtonHandler : MonoBehaviour
         Doctor doctor = GameObject.Find("Local").GetComponent<Doctor>();
         Door door = FindObjectsOfType<Door>().First(x => x.doorID == doctor.doctorID);
         Patient patient = door.playerQueue.First();
-        patient.CmdPopQueue(door.doorID);
+        doctor.CmdDPopQueue(door.doorID);
     }
 
     public void ChangeRoom()
@@ -105,6 +108,20 @@ public class ButtonHandler : MonoBehaviour
         Doctor doctor = GameObject.Find("Local").GetComponent<Doctor>();
 
         doctor.SwitchRooms();
+    }
+
+    public void NewPatient()
+    {
+        //Patient patient = GameObject.Find("Local").GetComponent<Patient>();
+        Doctor doctor = GameObject.Find("Local").GetComponent<Doctor>();
+        Door door = FindObjectsOfType<Door>().First(x => x.doorID == doctor.doctorID);
+        Patient patient = door.playerQueue.First();
+       // Door door = patient.GetDoor();
+        if (door != null)
+        {
+            patient.roomID = door.doorID;
+            patient.CmdPopQueue(door.doorID);
+        }
     }
 
 }

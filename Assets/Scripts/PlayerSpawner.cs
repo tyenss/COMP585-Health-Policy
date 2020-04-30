@@ -8,7 +8,7 @@ using UnityEngine;
 
     public class PlayerSpawner : NetworkBehaviour
     {
-    public Vector3[] pos = new[] { new Vector3(420f, -2800f, 0f), new Vector3(2420f, -2800f, 0f), new Vector3(4420f, -2800f, 0f), new Vector3(6420f, -2800f, 0f), new Vector3(8420f, -2800f, 0f), new Vector3(10420f, -2800f, 0f) };
+    public Vector3[] pos = new[] { new Vector3(420f, -2800f, 0f), new Vector3(420f, -2800f, 0f), new Vector3(2420f, -2800f, 0f), new Vector3(4420f, -2800f, 0f), new Vector3(6420f, -2800f, 0f), new Vector3(8420f, -2800f, 0f), new Vector3(10420f, -2800f, 0f) };
     
    
     //==420
@@ -91,7 +91,7 @@ using UnityEngine;
 
         //Choose a random position.
         GameObject result;
-       
+       //type 1 is patient
        if (characterType == 1)
        {
           Vector3 pos1 = new Vector3(UnityEngine.Random.Range(-2f, 500f), 0, 0);
@@ -100,13 +100,12 @@ using UnityEngine;
         else 
         {
         //Vector3 pos = new Vector3(doctorx, -2800f, 0f);
-          result = Instantiate(_characterPrefabs[index].Prefab, pos[GlobalVariables.docIndex], Quaternion.Euler(0, 180, 0));
-            GlobalVariables.docIndex ++;
+          result = Instantiate(_characterPrefabs[index].Prefab, pos[GlobalVariables.doctorList.Count], Quaternion.Euler(0, 180, 0));
+            //GlobalVariables.docIndex ++;
             
        }
             
-            //Vector3 pos = new Vector3(UnityEngine.Random.Range(-2f, 2f), 1f, UnityEngine.Random.Range(-2f, 2f));
-            //GameObject result = Instantiate(_characterPrefabs[index].Prefab, pos, Quaternion.identity);
+
            
 
             //Spawn over server giving authority to the client calling this command.

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using System.Linq;
 
 public class Doctor : NetworkBehaviour
 {
@@ -129,4 +131,29 @@ public class Doctor : NetworkBehaviour
 
 		//inOffice = !inOffice;
 	}
+
+    [Command]
+    public void CmdDPopQueue(int doorID)
+    {
+        Door localDoor = FindObjectsOfType<Door>().First(x => x.doorID == doorID);
+        //if (!localdoor.playerqueue.any())
+        //{
+        //    return;
+        //}
+        Patient popped = localDoor.playerQueue.First();
+        localDoor.playerQueue.RemoveAt(0);
+        if (localDoor.playerQueue.Any())
+        {
+            foreach (Patient patient in localDoor.playerQueue)
+            {
+                popped.RpcMovePatient(new Vector3(localDoor.coordsToPlace.x,
+                    localDoor.coordsToPlace.y + 100,
+                    patient.transform.position.z));
+            }
+        }
+        popped.NewDoor(null);
+        popped.roomID = doorID;
+        popped.transform.position = localDoor.officeCoords;
+        //EnableDisableButtons(true);
+    }
 }
