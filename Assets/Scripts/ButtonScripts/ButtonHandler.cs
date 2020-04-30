@@ -86,25 +86,35 @@ public class ButtonHandler : MonoBehaviour
     public void SetBandaidPrice(Text text)
     {
         Doctor doctor = GameObject.Find("Local").GetComponent<Doctor>();
-        Door WhiteboardText = FindObjectsOfType<Door>().First(x => x.doorID == doctor.doctorID);
+        WhiteboardText whiteboard = FindObjectsOfType<WhiteboardText>().First(x => x.whiteboardID == doctor.doctorID);
+        WhiteboardText whiteboard1 = FindObjectsOfType<WhiteboardText>().First(x => x.whiteboardID == doctor.doctorID+6);
 
         //Text text = GameObject.Find("BandaidPrice").GetComponent<Text>();
         int price = System.Int32.Parse(text.text);
         if (price >= GlobalVariables.bandaidCost)
         {
-            doctor.CmdSetBandaidPrice(price);
             
+            doctor.CmdSetBandaidPrice(price);
+            whiteboard.changeBandaidPrice();
+            whiteboard1.changeBandaidPrice();
+
+
+
         }
     }
 
     public void SetStitchesPrice(Text text)
     {
         Doctor doctor = GameObject.Find("Local").GetComponent<Doctor>();
+        WhiteboardText whiteboard = FindObjectsOfType<WhiteboardText>().First(x => x.whiteboardID == doctor.doctorID);
+        WhiteboardText whiteboard1 = FindObjectsOfType<WhiteboardText>().First(x => x.whiteboardID == doctor.doctorID + 6);
         //Text text = GameObject.Find("StitchesText").GetComponent<Text>();
         int price = Int32.Parse(text.text);
         if (price >= GlobalVariables.stitchesCost)
         {
             doctor.CmdSetStitchesPrice(price);
+            whiteboard.changeStitchPrice();
+            whiteboard1.changeStitchPrice();
         }
     }
 
@@ -123,18 +133,6 @@ public class ButtonHandler : MonoBehaviour
         doctor.SwitchRooms();
     }
 
-    public void NewPatient()
-    {
-        //Patient patient = GameObject.Find("Local").GetComponent<Patient>();
-        Doctor doctor = GameObject.Find("Local").GetComponent<Doctor>();
-        Door door = FindObjectsOfType<Door>().First(x => x.doorID == doctor.doctorID);
-        Patient patient = door.playerQueue.First();
-       // Door door = patient.GetDoor();
-        if (door != null)
-        {
-            patient.roomID = door.doorID;
-            patient.CmdPopQueue(door.doorID);
-        }
-    }
+   
 
 }

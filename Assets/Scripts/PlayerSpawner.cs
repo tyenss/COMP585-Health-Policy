@@ -99,7 +99,7 @@ using UnityEngine;
        }
         else 
         {
-        //Vector3 pos = new Vector3(doctorx, -2800f, 0f);
+        //instantiates doctor with vector location index same as doctorID
           result = Instantiate(_characterPrefabs[index].Prefab, pos[GlobalVariables.doctorList.Count], Quaternion.Euler(0, 180, 0));
             //GlobalVariables.docIndex ++;
             

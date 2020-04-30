@@ -15,7 +15,7 @@ public class GlobalVariables : MonoBehaviour
     public static int maxDoctors;
     public static int patientMoney;
     public static int numberOfRounds;
-    //public static int docIndex = 0;
+   
 
 
     public static List<Patient> patientList;

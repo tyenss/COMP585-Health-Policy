@@ -27,21 +27,40 @@ public class WhiteboardText : MonoBehaviour
 
     }
 
-    //public void changeBandaidPrice()
-    //{
-    //    //docotr=// get doctor by whiteboardid(same as doctorid) 
-    //    // bandaid.text= doctor.bandaidprice
-
-    //    foreach (Doctor item in doctorList) // Loop through List with foreach
-    //    {
-    //        if (item.doctorID = whiteboardID)
-    //        {
-    //            bandaid.text = doctor.bandaidPrice;
-    //        }
-    //    }
+    public void changeBandaidPrice()
+    {
+        Doctor doctor;
 
 
 
-    //}
+
+        if (whiteboardID > 6)
+        {
+            doctor = FindObjectsOfType<Doctor>().First(x => x.doctorID == whiteboardID - 6);
+        }
+        else
+        {
+            doctor = FindObjectsOfType<Doctor>().First(x => x.doctorID == whiteboardID);
+        }
+        bandaid.text = doctor.bandaidPrice.ToString();
+
+   
+
+    }
+    public void changeStitchPrice() { 
+         Doctor doctor;
+
+        if (whiteboardID > 6)
+        {
+            doctor = FindObjectsOfType<Doctor>().First(x => x.doctorID == whiteboardID - 6);
+        }
+        else
+        {
+            doctor = FindObjectsOfType<Doctor>().First(x => x.doctorID == whiteboardID);
+        }
+        stitches.text = doctor.stitchesPrice.ToString();
+
+    }
+
 
 }
